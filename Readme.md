@@ -1,3 +1,5 @@
-## Yo, I'm a Readme
+Heroku deployment:
+http://salvage-clothing.herokuapp.com/
 
-You should probably update me so people looking at your code have an idea what it is being used for :)
+Eventual URL:
+http://salvage.clothing
