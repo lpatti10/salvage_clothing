@@ -6,9 +6,10 @@
 // * {
 //   border: red 1px solid;
 // }
+
 $primary-dark-color: #271D17; //brown
-$primary-light-color:#F1E3C7; //ecru
-$primary-accent-color: #FBD919; //yellow
+$primary-light-color:#F7FAE7; //ecru
+$primary-accent-color: #DC4A41; //yellow #FFD21D;
 
 
 body {
@@ -25,6 +26,7 @@ header {
   background-color: $primary-dark-color;
   opacity: 0.95;
   padding-top: 1.4em;
+  z-index: 200;
   nav {
     @include outer-container;
     >h1 {
@@ -48,24 +50,14 @@ header {
 
 
 .hero {
-  $hero-background-top: darken($base-accent-color, 25); 
-  $hero-background-bottom: adjust-hue($hero-background-top, -70);
   $hero-color: white;
   $gradient-angle: 10deg;
   $hero-image: '../images/hero_landfill_1280_crop.jpg';
-
-  @include background(url($hero-image), linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top), no-repeat $hero-background-top scroll);
-
+  @include background(url($hero-image), no-repeat scroll);
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
   padding-bottom: 4em;
-
-  // .hero-logo img {
-  //   height: 3em;
-  //   margin-bottom: 2.5em;
-  // }
-
   .hero-inner {
     @include outer-container;
     @include clearfix;
@@ -74,11 +66,8 @@ header {
     margin: auto;
     text-align: center;
     color: $hero-color;
-
-
     .hero-copy {
       text-align: center;
-      
       h2 {
         color: $primary-dark-color;
         font-size: 2.0em;
@@ -88,14 +77,12 @@ header {
           font-size: 3.0em;
         }
       }
-
       p {
         font-family: $serif;
         margin: auto;
         margin-bottom: 3em; 
         font-weight: 200;
         line-height: 1.4em;
-
         @include media($large-screen) {
           font-size: 1.1em;
           max-width: 40%;
@@ -108,12 +95,6 @@ header {
 ///////////////////////////////////////////////// CTA + ANIMA //////////////////////////////////////////////
 
 
-.cta {
-  position: relative;
-  height: 500px;
-  width: 100%;
-  background: $primary-light-color;
-}
 
 /* keyframes for rotating animation */
 @-webkit-keyframes spin {
@@ -123,11 +104,13 @@ header {
 
 /* scene wrapper */
 .animation{
+  // border: green solid 2px;
   height: 250px;
-  margin-top: 0px;
   position:relative;
   perspective: 800;
   perspective-origin: 50% 100px;
+  background-color: rgba(255,255,255,0.0);
+  margin-top: -60px;
 }
 
 /* cube wrapper */
@@ -146,7 +129,9 @@ b{
   width:200px;
   height:200px;
   display:block;
-  background:rgba(249,215,24,0.7);
+  // background:rgba(249,215,24,0.7);
+  background: $primary-accent-color;
+  opacity: 0.7;
   box-shadow:inset 0 0 30px rgba(0,0,0,0.2);
   font-size:20px;
   text-align:center;
@@ -158,7 +143,7 @@ b{
 }
 b.back{
   transform: translateZ(-100px) rotateY(180deg);
-  background: $primary-dark-color;
+  // background: $primary-dark-color;
   // background:url(http://i45.tinypic.com/muxvt1.png);
 }
 b.right{
@@ -189,37 +174,55 @@ b.front{
   transform: translateZ(100px) rotateX(-210deg);
   transform-origin: top center;
 }
-
-.ctaCopy {
-  color: $primary-dark-color;
-  text-align: center;
-  button {
-    // @include button(simple, $base-background-color);
-    font-size: $base-font-size;
-    // outline: none;  
-    border: 5px $primary-dark-color solid;
-    border-radius: 0;
-    background: none;
+.cta {
+  margin-top: -190px;
+  height: auto;
+  width: 100%;
+  background-color: $primary-light-color;
+  .ctaCopy {
+    padding-top: 180px;
     color: $primary-dark-color;
-    margin-bottom: 1.5em; 
+    text-align: center;
+    >button {
+      font-size: 1.5em;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 700;
+      border: 5px $primary-dark-color solid;
+      border-radius: 0;
+      color: $primary-dark-color;
+      margin-top: 1em;
+      margin-bottom: 1.5em; 
+      background: none;
+      &:hover {
+        color: $primary-accent-color;
+        border: 5px $primary-accent-color solid;
+      }
+    } 
+    >h1 {
+      font-family: 'Droid Serif', serif;
+    }
+    .misconception {
+      padding-bottom: 40px;
+      h3 {
+        color: $primary-light-color;
+        margin-top: 1.5em; 
+        font-size: 1.0em;
+        width: 300px;
+        margin: 0 auto;
+        margin-top: 20px;
+        background-color: $primary-accent-color;
+      }
+      p {
+        width: 60%;
+        padding: 10px;
+        margin: 0 auto;
+        border-top: 1px solid $primary-accent-color;
+        border-bottom: 1px solid $primary-accent-color;
+      }
+    }
   } 
-  >h1 {
-    
-    font-family: 'Droid Serif', serif;
-  }
-  .misconception {
-    
-    h3 {
-      margin-top: 1.5em; 
-      font-size: 1.0em;
-      
-    }
-    p {
-      width: 60%;
-      margin: 0 auto;
-    }
-  }
 }
+
 
 
 
@@ -263,15 +266,24 @@ b.front{
   }
 
   .bullet-icon-1 {
-    background: $base-accent-color;
+    background: $primary-accent-color;
+      &:hover {
+        background: $primary-dark-color;
+      }
   }
 
   .bullet-icon-2 {
-    background: adjust-hue($base-accent-color, -50);
+    background: $primary-accent-color;
+      &:hover {
+        background: $primary-dark-color;
+      }
   }
 
   .bullet-icon-3 {
-    background: adjust-hue($base-accent-color, -140);
+    background: $primary-accent-color;
+      &:hover {
+        background: $primary-dark-color;
+      }
   }
 
   .bullet-content {
