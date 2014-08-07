@@ -31,7 +31,7 @@ header {
     @include outer-container;
     >h1 {
       @include span-columns(10);
-      @include shift(1);
+      // @include shift(1);
       // text-align: center;
       color: white;
       font-family: 'Droid Serif', serif; 
@@ -99,7 +99,7 @@ header {
 /* keyframes for rotating animation */
 @-webkit-keyframes spin {
   from { transform: rotateY(0); }
-  to   { transform: rotateY(-360deg); }
+  to   { transform: rotateY(360deg); }
 }
 
 /* scene wrapper */
@@ -144,17 +144,17 @@ b{
 b.back{
   transform: translateZ(-100px) rotateY(180deg);
   // background: $primary-dark-color;
-  background:url(../images/side1.png);
+  // background:url(../images/side2.png);
 }
 b.right{
   transform:rotateY(-270deg) translateX(100px);
   transform-origin: top right;
-  background:url(../images/side2.png);
+  // background:url(../images/side4.png);
 }
 b.left{
   transform:rotateY(270deg) translateX(-100px);
   transform-origin: center left;
-  background:url(../images/side3.png);
+  // background:url(../images/side3.png);
 }
 b.top{
   transform:rotateX(-90deg) translateY(-100px);
@@ -166,7 +166,7 @@ b.bottom{
 }
 b.front{
   transform: translateZ(100px);
-  background:url(../images/side4.png);
+  // background:url(../images/side1.png);
 }
 
 /* hover transformations */
@@ -183,6 +183,7 @@ b.front{
   width: 100%;
   background-color: $primary-light-color;
   .ctaCopy {
+    @include outer-container;
     padding-top: 180px;
     color: $primary-dark-color;
     text-align: center;
@@ -205,6 +206,8 @@ b.front{
       font-family: 'Droid Serif', serif;
     }
     .misconception {
+      @include span-columns(8);
+      @include shift(2);
       padding-bottom: 40px;
       h3 {
         color: $primary-light-color;
@@ -216,7 +219,8 @@ b.front{
         background-color: $primary-accent-color;
       }
       p {
-        width: 60%;
+        
+        // width: 60%;
         padding: 10px;
         margin: 0 auto;
         border-top: 1px solid $primary-accent-color;
@@ -301,6 +305,40 @@ b.front{
     }
   }
 }
+
+///////////////////////////////////////////////// FORM //////////////////////////////////////////////
+#request-form {
+  @include outer-container;
+  fieldset, #theform {
+    @include span-columns(6);
+    @include shift(3);
+  }
+  .submit_button {
+    font-size: 1.5em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    border: 5px $primary-dark-color solid;
+    border-radius: 0;
+    color: $primary-dark-color;
+    margin-top: 1em;
+    margin-bottom: 1.5em; 
+    background: none;
+    &:hover {
+      color: $primary-accent-color;
+      border: 5px $primary-accent-color solid;
+    }
+  }
+}
+
+form label, form input {
+    display: block;
+}
+
+
+
+// .zip-error {
+//   display: hidden;
+// }
 
 ///////////////////////////////////////////////// FOOTER //////////////////////////////////////////////
 

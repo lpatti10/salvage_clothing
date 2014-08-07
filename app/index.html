@@ -67,7 +67,7 @@
                 <h1>Help by recycling your unwanted clothes.</h1>
                 <article class="misconception">
                     <h3>THE PROBLEM WITH DONATING</h3>
-                    <p>Many charity pick-up services and thrift stores are overwhelmed by the volume of unsellable, donated clothing. Stained or damaged textiles can’t be resold and are typically disposed of. Synthetic fibers common today are problematic and hazardous to the decomposition process. We aim to take the unsellable clothes off the hands of these hard-working organizations.</p>
+                    <p>Many charity pick-up services and thrift stores are overwhelmed by the volume of donated clothing. Stained or damaged textiles can’t be resold and are typically disposed of. Synthetic fibers common today are problematic and hazardous to the decomposition process. We aim to take the unsellable clothes off the hands of these hard-working organizations.</p>
                 </article>
             </section>
         </section>
@@ -112,37 +112,78 @@
        <source sizes="100%" srcset="mobile.png 480w, small-tablet.png 768w, tablet.png 968w, desktop.png 1024w">
        <img src="tablet.png" alt="A photo of London by night">
     </picture> -->
+        <div id="request-form" method=" " action="/ " enctype="multipart/form-data" novalidate="">
+
+                <fieldset>
+                    <h3>JUST ONE SIMPLE FORM.</h3>
+                    <h6>NO ACCOUNT REQUIRED</h6>
+                    <p>Based on your location, we’ll match you with the nearest recycling facility. Your box will arrive in 3 to 5 days with a pre-paid shipping label included.</p>
+                    <small>All fields required.</small>
+                    <!-- <input type="hidden" name="id" value="2088"> -->
+                    <!-- place the value of the gh_src URL parameter in the field below -->
+                    <!--  <input type="hidden" name="mapped_url_token" value=""> -->
+                </fieldset>
+        
+                
+<!--
+                <fieldset id="form-inputs">
+                    <input type="text" class="input_text" name="first_name" placeholder="First Name" data-required="true">
+                    <input type="text" class="input_text" name="last_name" placeholder="Last Name" data-required="true">
+                    <input type="text" class="input_text" name="street_address" placeholder="Street Address" data-required="true">
+                    <input type="text" class="input_text" name="city" placeholder="City" data-required="true">
+                    <input type="text" class="input_text" name="state" placeholder="State" data-required="true">
+                    <input type="text" class="input_text" name="zip" placeholder="Zipcode" data-required="true">
+                    <input type="tel" class="input_text" name="phone" placeholder="Phone" data-required="true">
+                    <input type="email" class="input_text" name="email" placeholder="Email" data-required="true">
+                    <input type="submit" value="SUBMIT" class="submit_button">
+                </fieldset>
+-->
+        <form id="theform">
+            <label for="first-name">
+                <input type="text" id="first-name" name="first_name" placeholder="First Name" data-required="true" />
+            </label>
+
+            <label for="last-name">
+                <input type="text" id="last-name" name="last_name" placeholder="Last Name" data-required="true" />
+            </label>
+
+            <label for="phone">
+                <input type="tel" id="phone" name="phone" placeholder="Phone" data-required="true">
+            </label>
+
+            <label for="email">
+                <input type="email" id="email" name="email" placeholder="Email" data-required="true">
+            </label>
+
+            <label for="street">
+                <input type="text" id="street" name="street_address" placeholder="Street Address" data-required="true" />
+            </label>
+
+            <label for="city">
+                <input type="text" id="city" name="city" placeholder="City" data-required="true"/>
+            </label>
+
+            <label for="state-short">
+                <input type="text" id="state-short" name="state" placeholder="State" data-required="true"/>
+            </label>
+
+            <label for="zip">
+                <input type="text" id="zip" name="zip" placeholder="Enter your zipcode." data-required="true" />
+            </label>
+
+            <label for="country">
+                <input type="text" id="country" name="country" placeholder="Country" data-required="true" />
+            </label>
 
 
-    <footer class="footer-2">
-      <!-- <div class="footer-logo">
-        <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png" alt="">
-      </div>
-        <ul>
-          <li><a href="javascript:void(0)">About</a></li>
-          <li><a href="javascript:void(0)">Contact</a></li>
-          <li><a href="javascript:void(0)">Products</a></li>
-        </ul>
 
-        <div class="footer-secondary-links">
-          <ul>
-            <li><a href="javascript:void(0)">Terms and Conditions</a></li>
-            <li><a href="javascript:void(0)">Privacy Policy</a></li>
-          </ul>
+            <!-- <input type="submit" /> -->
+            <input type="submit" value="SUBMIT" class="submit_button">
+        </form>
 
-          <ul class="footer-social">
-            <li><a href="javascript:void(0)">
-              <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/facebook-logo-circle.png" alt="">
-              </a></li>
-            <li><a href="javascript:void(0)">
-              <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/twitter-logo-circle.png" alt="">
-            </a></li>
-            <li><a href="javascript:void(0)">
-              <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/youtube-logo-circle.png" alt="">
-            </a></li>
-          </ul>
-        </div> -->
-    </footer>
+    </div>
+
+    <footer class="footer-2"></footer>
 
 
 </div><!--End of wrapper-->
@@ -166,7 +207,7 @@
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
-    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/jquery/dist/jquery.js"></script>  
     <script src="../bower_components/underscore/underscore.js"></script>
     <script src="../bower_components/backbone/backbone.js"></script>
     <script src="../bower_components/handlebars/handlebars.min.js"></script>
@@ -176,6 +217,7 @@
 
         <!-- build:js scripts/main.js -->
         <script src="scripts/main.js"></script>
+        <script type="text/javascript" src="scripts/jquery.ziptastic.js"></script>
         <!-- endbuild -->
 </body>
 </html>
