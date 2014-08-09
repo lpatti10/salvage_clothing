@@ -1,4 +1,5 @@
-// Ziptastic function working as-is!!
+// ZIPTASTIC FORM PLUGIN ///////////////////////////////////////////////////////////////////////
+
 (function($) {
     $(function() {
         var duration = 500;
@@ -51,3 +52,140 @@
             });
     });
 }(jQuery));
+
+
+// GOOGLE MAP  /////////////////////////////////////////////////////////////////////////////
+
+// An object literal to hold a number of map properties.
+function initialize() {
+    // Added below for styled map??????????????????
+    var styles = [
+      {
+        featureType: '',
+        elementType: '',
+        stylers: [
+          {hue: '#DC4A41'},
+          {saturation: ''},
+          {lightness: ''},
+        ]
+      }
+    ];
+
+    var styledMap = new google.maps.StyledMapType(styles,{name: "Styled Map"});
+
+    var mapOptions = {
+        center: new google.maps.LatLng(39.091919,-94.5757195),
+        zoom: 4,
+        //Prevents zoom on scroll
+        scrollwheel: false,
+        //Next 3 controllers look distorted when rendered
+        panControl: false,
+        zoomControl: false,
+        streetViewControl: false
+        // mapTypeControl: false,
+        // scaleControl: false,
+        // overviewMapControl: false
+    };
+
+    // A "map" object, passing it the div element and the map properties.
+    var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+    
+    // Custom marker icon variables
+    var longjohns = '../images/longjohns_icon.png';
+    var shirt = '../images/lsshirt_icon.png';
+    var zipup = '../images/zipup_icon.png';
+    
+    // Plotted recovery center variables
+    var rec1 = new google.maps.LatLng(29.865911,-95.566727); 
+    var rec2 = new google.maps.LatLng(32.946979,-80.624673); 
+    var rec3 = new google.maps.LatLng(27.7692544,-82.6630569);
+    var rec4 = new google.maps.LatLng(38.6791963,-90.3947229); 
+    var rec5 = new google.maps.LatLng(40.7914948,-73.1382576); 
+    var rec6 = new google.maps.LatLng(42.19606,-71.75631); 
+    var rec7 = new google.maps.LatLng(44.050317,-91.6214551); 
+    var rec8 = new google.maps.LatLng(47.8487843,-122.2389721); 
+    var rec9 = new google.maps.LatLng(37.7756117,-122.4179582); 
+    var rec10 = new google.maps.LatLng(32.552842,-117.052538); 
+    
+    // Plotted recovery center markers
+    var rec1_marker = new google.maps.Marker({
+        position: rec1,
+        map: map,
+        title:"American Textile Recycling Services",
+        icon: longjohns
+    });
+
+    var rec2_marker = new google.maps.Marker({
+        position: rec2,
+        map: map,
+        title:"Carolina Textile Recycling",
+        icon: shirt
+    });
+
+    var rec3_marker = new google.maps.Marker({
+        position: rec3,
+        map: map,
+        title:"Suncoast Textile Recycling Corporation",
+        icon: longjohns
+    });
+    
+    var rec4_marker = new google.maps.Marker({
+        position: rec4,
+        map: map,
+        title:"USAgain",
+        icon: shirt
+    });
+
+    var rec5_marker = new google.maps.Marker({
+        position: rec5,
+        map: map,
+        title:"Earthrite Textile Recycling",
+        icon: longjohns
+    });
+
+    var rec6_marker = new google.maps.Marker({
+        position: rec6,
+        map: map,
+        title:"Millbury Textile Recycling",
+        icon: shirt
+    });
+
+    var rec7_marker = new google.maps.Marker({
+        position: rec7,
+        map: map,
+        title:"Miller Waste Mills Inc",
+        icon: longjohns
+    });
+
+    var rec8_marker = new google.maps.Marker({
+        position: rec8,
+        map: map,
+        title:"Retex",
+        icon: shirt
+    });
+
+    var rec9_marker = new google.maps.Marker({
+        position: rec9,
+        map: map,
+        title:"San Francisco Department of the Environment",
+        icon: longjohns
+    });
+
+    var rec10_marker = new google.maps.Marker({
+        position: rec10,
+        map: map,
+        title:"A & E Textile Recovery",
+        icon: shirt
+    });
+
+    //Associate the styled map with the MapTypeId and set it to display.
+    map.mapTypes.set('map_style', styledMap);
+    map.setMapTypeId('map_style');
+
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+// END OF GOOGLE MAP ///////////////////////////////////////////////////////////////////////
+
+

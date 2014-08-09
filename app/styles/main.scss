@@ -8,14 +8,22 @@
 // }
 
 $primary-dark-color: #271D17; //brown
-$primary-light-color:#F7FAE7; //ecru
+$primary-light-color: #d6d6c9; //ecru #F7FAE7
 $primary-accent-color: #DC4A41; //yellow #FFD21D;
 
+html{
+  height: 100%;
+}
 
 body {
   background: #fafafa;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #333;
+  height: 100%;
+}
+
+.wrapper {
+  height: 100%;
 }
 
 header {
@@ -312,20 +320,30 @@ b.front{
   fieldset, #theform {
     @include span-columns(6);
     @include shift(3);
-  }
-  .submit_button {
-    font-size: 1.5em;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 700;
-    border: 5px $primary-dark-color solid;
-    border-radius: 0;
-    color: $primary-dark-color;
-    margin-top: 1em;
-    margin-bottom: 1.5em; 
-    background: none;
-    &:hover {
-      color: $primary-accent-color;
-      border: 5px $primary-accent-color solid;
+    input {
+      border-radius: 0;
+      background-color: $primary-light-color;
+      font-family: 'Droid Serif', serif;
+      font-weight: normal;
+      box-shadow: none;
+      border: none;
+      color: $primary-dark-color;
+      height: $base-line-height *2;
+    }
+    input.submit_button {
+      font-size: 1.5em;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 700;
+      border: 5px $primary-dark-color solid;
+      border-radius: 0;
+      color: $primary-dark-color;
+      margin-top: 1em;
+      margin-bottom: 1.5em; 
+      background: none;
+      &:hover {
+        color: $primary-accent-color;
+        border: 5px $primary-accent-color solid;
+      }
     }
   }
 }
@@ -339,6 +357,14 @@ form label, form input {
 // .zip-error {
 //   display: hidden;
 // }
+///////////////////////////////////////////////// MAP //////////////////////////////////////////////
+
+#map-canvas {
+  height: 100%;
+  width: 100%;
+}
+
+
 
 ///////////////////////////////////////////////// FOOTER //////////////////////////////////////////////
 
