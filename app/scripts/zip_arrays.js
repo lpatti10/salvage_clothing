@@ -23,26 +23,3 @@ var rec10_zips = [80, 81, 85, 86, 87, 88, 90, 91, 92]
 
 
 
-//Tim's sample code for looping through data array
-
-var locations = [ /* array of Locations */ ];
-
-
-_.each(locations, function (data) {
-    
-    new google.maps.Marker({
-        position: new google.maps.LatLng(data.lat, data.long),
-        map: map,
-        title: data.title,
-        icon: data.icon
-    });
-    
-    new google.maps.InfoWindow({
-        content: data.content
-    });
-    
-    google.maps.event.addListener(data.name, 'click', function () {
-        infowindow.open(map, data.name);
-    })
-    
-})
