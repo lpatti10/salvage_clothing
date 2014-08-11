@@ -7,9 +7,10 @@
 //   border: red 1px solid;
 // }
 
-$primary-dark-color: #271D17; //brown
-$primary-light-color: #d6d6c9; //ecru #F7FAE7
-$primary-accent-color: #DC4A41; //yellow #FFD21D;
+$primary-dark-color: #3C474D; //brown #271D17
+$primary-light-color: #E0DCCC; //ecru #F7FAE7; #d6d6c9
+$primary-accent-color: #D7624E; //yellow #FFD21D; #DC4A41
+$primary-lightest-color: #F2F0E6;
 
 html{
   height: 100%;
@@ -41,7 +42,7 @@ header {
       @include span-columns(10);
       // @include shift(1);
       // text-align: center;
-      color: white;
+      color: $primary-lightest-color;
       font-family: 'Droid Serif', serif; 
       font-weight: 400;
       // font-style: italic;
