@@ -1,74 +1,172 @@
-    // var rec2 = new google.maps.LatLng(32.946979,-80.624673); 
-    // var rec3 = new google.maps.LatLng(27.7692544,-82.6630569);
-    // var rec4 = new google.maps.LatLng(38.6791963,-90.3947229); 
-    // var rec5 = new google.maps.LatLng(40.7914948,-73.1382576); 
-    // var rec6 = new google.maps.LatLng(42.19606,-71.75631); 
-    // var rec7 = new google.maps.LatLng(44.050317,-91.6214551); 
-    // var rec8 = new google.maps.LatLng(47.8487843,-122.2389721); 
-    // var rec9 = new google.maps.LatLng(37.7756117,-122.4179582); 
-    // var rec10 = new google.maps.LatLng(32.552842,-117.052538); 
     
-    var longjohns = '../images/longjohns_icon.png';
-    var shirt = '../images/lsshirt_icon.png';
-    ///////////////////////////////////////////////////////////
+var longjohns = '../images/longjohns_icon.png';
 
-var locations = [{
+var shirt = '../images/lsshirt_icon.png';
 
-        name: "rec1_marker", 
+var locations = [
+    
+    {
+        name: 'rec1', 
         position: new google.maps.LatLng(29.865911,-95.566727),
         // map: map,
         title:"American Textile Recycling Services",
         icon: longjohns,
-        content: '<div id="content">'+
-        '<div id="siteNotice">'+
-        '</div>'+
-        '<h1 id="firstHeading" class="firstHeading">Uluru</h1>'+
-        '<div id="bodyContent">'+
-        '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
-        'sandstone rock formation in the southern part of the '+
-        'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
-        'south west of the nearest large town, Alice Springs; 450&#160;km '+
-        '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major '+
-        'features of the Uluru - Kata Tjuta National Park. Uluru is '+
-        'sacred to the Pitjantjatjara and Yankunytjatjara, the '+
-        'Aboriginal people of the area. It has many springs, waterholes, '+
-        'rock caves and ancient paintings. Uluru is listed as a World '+
-        'Heritage Site.</p>'+
-        '<p>Attribution: Uluru, <a href="http://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
-        'http://en.wikipedia.org/w/index.php?title=Uluru</a> '+
-        '(last visited June 22, 2009).</p>'+
-        '</div>'+
+        content: 
+        '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">American Textile Recycling Services</h1>'+
+            '<div id="bodyContent">'+
+                '<p>Description here...</p>'+
+                '<p>Link title... <a href="#"</a></p>'+
+            '</div>'+
         '</div>'
     }, {
+        name: 'rec2', 
+        position: new google.maps.LatLng(32.946979,-80.624673),
+        // map: map,
+        title:"Carolina Textile Recycling",
+        icon: shirt,
+        content: 
+        '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Carolina Textile Recycling</h1>'+
+            '<div id="bodyContent">'+
+                '<p>Description here...</p>'+
+                '<p>Link title... <a href="#"</a></p>'+
+            '</div>'+
+        '</div>'
+    },  {
+        name: 'rec3', 
+        position: new google.maps.LatLng(27.7692544,-82.6630569),
+        // map: map,
+        title:"Suncoast Textile Recycling Corporation",
+        icon: longjohns,
+        content: 
+        '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Suncoast Textile Recycling Corporation</h1>'+
+            '<div id="bodyContent">'+
+                '<p>Description here...</p>'+
+                '<p>Link title... <a href="#"</a></p>'+
+            '</div>'+
+        '</div>'
+    },  {
+        name: 'rec4', 
+        position: new google.maps.LatLng(38.6791963,-90.3947229),
+        // map: map,
+        title:"USAgain",
+        icon: shirt,
+        content: 
+        '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">USAgain</h1>'+
+            '<div id="bodyContent">'+
+                '<p>Description here...</p>'+
+                '<p>Link title... <a href="#"</a></p>'+
+            '</div>'+
+        '</div>'
+    },  {
+        name: 'rec5', 
+        position: new google.maps.LatLng(40.7914948,-73.1382576),
+        // map: map,
+        title:"Earthrite Textile Recycling",
+        icon: longjohns,
+        content: 
+        '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Earthrite Textile Recycling</h1>'+
+            '<div id="bodyContent">'+
+                '<p>Description here...</p>'+
+                '<p>Link title... <a href="#"</a></p>'+
+            '</div>'+
+        '</div>'
+    },  {
+        name: 'rec6', 
+        position: new google.maps.LatLng(42.19606,-71.75631),
+        // map: map,
+        title:"Millbury Textile Recycling",
+        icon: shirt,
+        content: 
+        '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Millbury Textile Recycling</h1>'+
+            '<div id="bodyContent">'+
+                '<p>Description here...</p>'+
+                '<p>Link title... <a href="#"</a></p>'+
+            '</div>'+
+        '</div>'
+    }, {
+        name: 'rec7', 
+        position: new google.maps.LatLng(44.050317,-91.6214551),
+        // map: map,
+        title:"Miller Waste Mills Inc",
+        icon: longjohns,
+        content: 
+        '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Miller Waste Mills Inc</h1>'+
+            '<div id="bodyContent">'+
+                '<p>Description here...</p>'+
+                '<p>Link title... <a href="#"</a></p>'+
+            '</div>'+
+        '</div>'
+    }, {
+        name: 'rec8', 
+        position: new google.maps.LatLng(47.8487843,-122.2389721),
+        // map: map,
+        title:"Retex",
+        icon: shirt,
+        content: 
+        '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Retex</h1>'+
+            '<div id="bodyContent">'+
+                '<p>Description here...</p>'+
+                '<p>Link title... <a href="#"</a></p>'+
+            '</div>'+
+        '</div>'
+    }, {
+        name: 'rec9', 
+        position: new google.maps.LatLng(37.7756117,-122.4179582),
+        // map: map,
+        title:"San Francisco Department of the Environment",
+        icon: longjohns,
+        content: 
+        '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">San Francisco Department of the Environment</h1>'+
+            '<div id="bodyContent">'+
+                '<p>Description here...</p>'+
+                '<p>Link title... <a href="#"</a></p>'+
+            '</div>'+
+        '</div>'    
+    }, {
+        name: 'rec10', 
+        position: new google.maps.LatLng(32.552842,-117.052538),
+        // map: map,
+        title:"A & E Textile Recovery",
+        icon: shirt,
+        content: 
+        '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">A & E Textile Recovery</h1>'+
+            '<div id="bodyContent">'+
+                '<p>Description here...</p>'+
+                '<p>Link title... <a href="#"</a></p>'+
+            '</div>'+
+        '</div>'    
+    } 
+]
 
 
 
-
-}]
-
-
-
-
-//Tim's sample code for looping through data array
-
-
-
-
-// _.each(locations, function (data) {
-    
-//     new google.maps.Marker({
-//         position: data.position,
-//         map: map,
-//         title: data.title,
-//         icon: data.icon
-//     });
-    
-//     new google.maps.InfoWindow({
-//         content: data.content
-//     });
-    
-//     google.maps.event.addListener(data.name, 'click', function () {
-//         infowindow.open(map, data.name);
-//     })
-    
-// })
