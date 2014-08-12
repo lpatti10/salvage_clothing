@@ -44,136 +44,146 @@
             </nav>
         </header>
 
-        <div class="hero">
-            <div class="hero-inner">
-                <!-- <a href="" class="hero-logo"><img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png" alt=""></a> -->
-                <div class="hero-copy">
-                    <h2>3.8 BILLION POUNDS OF TEXTILE WASTE END UP IN LANDFILLS EACH YEAR</h2>
+        <div class="pageContainer"></div>
+<!--HOME PAGE TEMPLATE...............................................................-->
+    <script type="text/template" id="home-template">
+  
+            <div class="hero">
+                <div class="hero-inner">
+                    <!-- <a href="" class="hero-logo"><img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png" alt=""></a> -->
+                    <div class="hero-copy">
+                        <h2>3.8 BILLION POUNDS OF TEXTILE WASTE END UP IN LANDFILLS EACH YEAR</h2>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="animation">
-          <div class="cube">
-            <b class="front"></b>
-            <b class="back"></b>
-            <b class="top"></b>
-            <b class="bottom"></b>
-            <b class="left"></b>
-            <b class="right"></b>
-          </div>
-       </div>
+            <div class="animation">
+              <div class="cube">
+                <b class="front"></b>
+                <b class="back"></b>
+                <b class="top"></b>
+                <b class="bottom"></b>
+                <b class="left"></b>
+                <b class="right"></b>
+              </div>
+           </div>
 
-        <section class="cta">
-            <section class="ctaCopy">
-                <button>REQUEST A BOX</button>
-                <h1>Help by recycling your unwanted clothes.</h1>
-                <article class="misconception">
-                    <h3>THE PROBLEM WITH DONATING</h3>
-                    <p>Many charity pick-up services and thrift stores are overwhelmed by the volume of donated clothing. Stained or damaged textiles can’t be resold and are typically disposed of. Synthetic fibers common today are problematic and hazardous to the decomposition process. We aim to take the unsellable clothes off the hands of these hard-working organizations.</p>
-                </article>
+            <section class="cta">
+                <section class="ctaCopy">
+                    <button id="request_btn">REQUEST A BOX</button>
+                    <h1>Help by recycling your unwanted clothes.</h1>
+                    <article class="misconception">
+                        <h3>THE PROBLEM WITH DONATING</h3>
+                        <p>Many charity pick-up services and thrift stores are overwhelmed by the volume of donated clothing. Stained or damaged textiles can’t be resold and are typically disposed of. Synthetic fibers common today are problematic and hazardous to the decomposition process. We aim to take the unsellable clothes off the hands of these hard-working organizations.</p>
+                    </article>
+                </section>
             </section>
-        </section>
-        
+            
 
-
-        <div class="bullets">
-            <div class="bullet three-col-bullet">
-                <div class="bullet-icon bullet-icon-1">
-                <span class="mega-octicon octicon-package"></span>
-                   <!--  <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_2.png" alt=""> -->
+            <div class="bullets">
+                <div class="bullet three-col-bullet">
+                    <div class="bullet-icon bullet-icon-1">
+                    <span class="mega-octicon octicon-package"></span>
+                       
+                    </div>
+                    <div class="bullet-content">
+                        <h2>REQUEST PRE-PAID BOX</h2>
+                        <p>Based on your location, we’ll match you with the nearest participating facility. In 3-5 days, you’ll recieve an empty box with a pre-paid postage affixed.</p>
+                    </div>
+                </div>  
+                <div class="bullet three-col-bullet">
+                    <div class="bullet-icon bullet-icon-2">
+                    <span class="mega-octicon octicon-jersey"></span>
+                      
+                    </div>
+                    <div class="bullet-content">
+                        <h2>PACK USED TEXTILES</h2>
+                        <p>Start purging. We accept clothing and hosehold textiles in any condition. No cleaning, sorting or folding necessary! <a href="">What textiles can I recycle?</a></p>
+                    </div>
                 </div>
-                <div class="bullet-content">
-                    <h2>REQUEST PRE-PAID BOX</h2>
-                    <p>Based on your location, we’ll match you with the nearest participating facility. In 3-5 days, you’ll recieve an empty box with a pre-paid postage affixed.</p>
-                </div>
-            </div>  
-            <div class="bullet three-col-bullet">
-                <div class="bullet-icon bullet-icon-2">
-                <span class="mega-octicon octicon-jersey"></span>
-                   <!--  <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_3.png" alt=""> -->
-                </div>
-                <div class="bullet-content">
-                    <h2>PACK USED TEXTILES</h2>
-                    <p>Start purging. We accept clothing and hosehold textiles in any condition. No cleaning, sorting or folding necessary! <a href="">What textiles can I recycle?</a></p>
-                </div>
+                <div class="bullet three-col-bullet">
+                    <div class="bullet-icon bullet-icon-3">
+                    <span class="mega-octicon octicon-sync"></span>
+                       
+                    </div>
+                    <div class="bullet-content">
+                        <h2>DROP IT OFF!</h2>
+                        <p>Your sealed box is ready to go. Simply drop it off at any shipping merchant and all postage is paid. <a href="">Find a drop-off location.</a></p>
+                    </div>
+                </div> 
             </div>
-            <div class="bullet three-col-bullet">
-                <div class="bullet-icon bullet-icon-3">
-                <span class="mega-octicon octicon-sync"></span>
-                    <!-- <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_4.png" alt=""> -->
-                </div>
-                <div class="bullet-content">
-                    <h2>DROP IT OFF!</h2>
-                    <p>Your sealed box is ready to go. Simply drop it off at any shipping merchant and all postage is paid. <a href="">Find a drop-off location.</a></p>
-                </div>
-            </div> 
-        </div>
-
-
-    <!-- <picture>
-       <source sizes="100%" srcset="mobile.png 480w, small-tablet.png 768w, tablet.png 968w, desktop.png 1024w">
-       <img src="tablet.png" alt="A photo of London by night">
-    </picture> -->
-        <div id="request-form" method=" " action="/ " enctype="multipart/form-data" novalidate="">
+       </div>
+</script>
+<!--REQUEST PAGE...............................................................................-->
+<script type="text/template" id="request-template">        
+            <div id="request-form" method=" " action="/ " enctype="multipart/form-data" novalidate="">
 
                 <fieldset>
                     <h3>JUST ONE SIMPLE FORM.</h3>
                     <h6>NO ACCOUNT REQUIRED</h6>
                     <p>Based on your location, we’ll match you with the nearest recycling facility. Your box will arrive in 3 to 5 days with a pre-paid shipping label included.</p>
                     <small>All fields required.</small>
-                    <!-- <input type="hidden" name="id" value="2088"> -->
-                    <!-- place the value of the gh_src URL parameter in the field below -->
-                    <!--  <input type="hidden" name="mapped_url_token" value=""> -->
+                  
                 </fieldset>
-        
-                
-        <form id="theform">
-            <label for="first-name">
-                <input type="text" id="first-name" name="first_name" placeholder="First Name" data-required="true" />
-            </label>
+            
+                    
+            <form id="theform">
+                <label for="first-name">
+                    <input type="text" id="first-name" name="first_name" placeholder="First Name" data-required="true" />
+                </label>
 
-            <label for="last-name">
-                <input type="text" id="last-name" name="last_name" placeholder="Last Name" data-required="true" />
-            </label>
+                <label for="last-name">
+                    <input type="text" id="last-name" name="last_name" placeholder="Last Name" data-required="true" />
+                </label>
 
-            <label for="phone">
-                <input type="tel" id="phone" name="phone" placeholder="Phone" data-required="true">
-            </label>
+                <label for="phone">
+                    <input type="tel" id="phone" name="phone" placeholder="Phone" data-required="true">
+                </label>
 
-            <label for="email">
-                <input type="email" id="email" name="email" placeholder="Email" data-required="true">
-            </label>
+                <label for="email">
+                    <input type="email" id="email" name="email" placeholder="Email" data-required="true">
+                </label>
 
-            <label for="street">
-                <input type="text" id="street" name="street_address" placeholder="Street Address" data-required="true" />
-            </label>
+                <label for="street">
+                    <input type="text" id="street" name="street_address" placeholder="Street Address" data-required="true" />
+                </label>
 
-            <label for="city">
-                <input type="text" id="city" name="city" placeholder="City" data-required="true"/>
-            </label>
+                <label for="city">
+                    <input type="text" id="city" name="city" placeholder="City" data-required="true"/>
+                </label>
 
-            <label for="state-short">
-                <input type="text" id="state-short" name="state" placeholder="State" data-required="true"/>
-            </label>
+                <label for="state-short">
+                    <input type="text" id="state-short" name="state" placeholder="State" data-required="true"/>
+                </label>
 
-            <label for="zip">
-                <input type="text" id="zip" name="zip" placeholder="Enter your zipcode." data-required="true" />
-            </label>
+                <label for="zip">
+                    <input type="text" id="zip" name="zip" placeholder="Enter your zipcode." data-required="true" />
+                </label>
 
-            <label for="country">
-                <input type="text" id="country" name="country" placeholder="Country" data-required="true" />
-            </label>
+                <label for="country">
+                    <input type="text" id="country" name="country" placeholder="Country" data-required="true" />
+                </label>
 
 
+                <input type="submit" value="SUBMIT" class="submit_button">
+            </form>
 
-            <!-- <input type="submit" /> -->
-            <input type="submit" value="SUBMIT" class="submit_button">
-        </form>
+        </div>
 
     </div>
-
+</script>
+<!--CONFIRM PAGE..............................................................................-->
+<script type="text/template" id="confirm-template">       
+    <div id="confirm" >
+        <h1>Thank You, {{ first-name }}.</h1>
+    </div>
     <div id="map-canvas">
+    </div>
+</script>
+
+
+
+<div id="map-canvas">
     </div>
 
     <footer class="footer-2"></footer>
@@ -209,10 +219,13 @@
     <!-- endbuild -->
 
         <!-- build:js scripts/main.js -->
-        <script src="scripts/main.js"></script>
         <script src="scripts/locations_data.js"></script>
         <script type="text/javascript" src="scripts/jquery.ziptastic.js"></script>
-        
+        <script src="scripts/views/home_view.js"></script>
+        <script src="scripts/views/request_view.js"></script>
+        <script src="scripts/views/confirm_view.js"></script>
+   
+        <script src="scripts/main.js"></script>
         <!-- endbuild -->
 </body>
 </html>

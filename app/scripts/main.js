@@ -1,5 +1,18 @@
-// ZIPTASTIC FORM PLUGIN ///////////////////////////////////////////////////////////////////////
+// Instance of Home Page
+var home = new HomePageView();
+$(".pageContainer").html(home.el);
 
+// Instance of Request Page
+// var request = new RequestPageView();
+// $(".pageContainer").html(request.el);
+
+// Instance of Confirm Page
+// var confirm = new ConfirmPageView();
+// $(".pageContainer").html(confirm.el);
+
+
+// ZIPTASTIC FORM PLUGIN ///////////////////////////////////////////////////////////////////////
+var formPlugin = function() {
 (function($) {
     $(function() {
         var duration = 500;
@@ -51,15 +64,16 @@
             });
     });
 }(jQuery));
+};
 
 // SUBMIT FORM MATCH + ZOOM  /////////////////////////////////////////////////////////////////////////////
 
     //Function to run through zip arrays and zoom in on map.
-    $('#theform').on('submit', function () {
-        alert("I'm clicked");
-        var userZip = $('#zip').val();
-        console.log(userZip);
-    });
+    // $('#theform').on('submit', function () {
+    //     alert("I'm clicked");
+    //     var userZip = $('#zip').val();
+    //     console.log(userZip);
+    // });
 // GOOGLE MAP  /////////////////////////////////////////////////////////////////////////////
 
 // An object literal to hold a number of map properties.
