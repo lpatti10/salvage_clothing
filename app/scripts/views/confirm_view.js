@@ -13,6 +13,7 @@ var ConfirmPageView = Backbone.View.extend({
 	render: function() {
 		var template =  $('#confirm-template').html();
 		this.$el.html(template);
+		
 		//zoom on map's match????????????
 	},
 

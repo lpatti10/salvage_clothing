@@ -371,6 +371,12 @@ form label, form input {
  .firstHeading {
     font-family: 'Droid Serif', serif;
     font-size: 1.5em;
+    >a {
+      color: $primary-accent-color; 
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   } 
 }
 

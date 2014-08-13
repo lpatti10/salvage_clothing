@@ -20,7 +20,6 @@ var HomePageView = Backbone.View.extend({
 	 	var request = new RequestPageView();
 		$(".pageContainer").html(request.el);
 		formPlugin();
-		//$(this).trigger(formPlugin); ?????????????
 	}
 	
 

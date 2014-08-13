@@ -9,16 +9,15 @@ var locations = [
         name: 'rec1', 
         position: new google.maps.LatLng(29.865911,-95.566727),
         // map: map,
-        title:"American Textile Recycling Services",
+        title:"American Textile Recycling",
         icon: longjohns,
         content: 
         '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">American Textile Recycling Services</h1>'+
+            '<h1 id="firstHeading" class="firstHeading"><a href="http://atrscorp.com" target="_blank">American Textile Recycling</a></h1>'+
             '<div id="bodyContent">'+
-                '<p>Description here...</p>'+
-                '<p>Link title... <a href="#"</a></p>'+
+                '<p>10739 W Little York Rd #100, Houston, TX <br> (713) 856-6170</p>'+
             '</div>'+
         '</div>'
     }, {
@@ -31,26 +30,24 @@ var locations = [
         '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">Carolina Textile Recycling</h1>'+
+            '<h1 id="firstHeading" class="firstHeading"><a href="https://plus.google.com/105428587463519345659/about?gl=us&hl=en" target="_blank">Carolina Textile Recycling</a></h1>'+
             '<div id="bodyContent">'+
-                '<p>Description here...</p>'+
-                '<p>Link title... <a href="#"</a></p>'+
+                '<p>68 Anderson Rd, Walterboro, SC <br> (843) 538-8644</p>'+
             '</div>'+
         '</div>'
     },  {
         name: 'rec3', 
         position: new google.maps.LatLng(27.7692544,-82.6630569),
         // map: map,
-        title:"Suncoast Textile Recycling Corporation",
+        title:"Suncoast Textile Recycling",
         icon: longjohns,
         content: 
         '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">Suncoast Textile Recycling Corporation</h1>'+
+            '<h1 id="firstHeading" class="firstHeading"><a href="https://plus.google.com/102660832478251858597/about?hl=en" target="_blank">Suncoast Textile Recycling</a></h1>'+
             '<div id="bodyContent">'+
-                '<p>Description here...</p>'+
-                '<p>Link title... <a href="#"</a></p>'+
+                '<p>201 22nd St S, St Petersburg, FL <br> (727) 729-2862</p>'+
             '</div>'+
         '</div>'
     },  {
@@ -63,10 +60,9 @@ var locations = [
         '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">USAgain</h1>'+
+            '<h1 id="firstHeading" class="firstHeading"><a href="http://www.usagain.com" target="_blank">USAgain</a></h1>'+
             '<div id="bodyContent">'+
-                '<p>Description here...</p>'+
-                '<p>Link title... <a href="#"</a></p>'+
+                '<p>1113 N Warson Rd, St Louis, MO <br> (314) 291-0046</p>'+
             '</div>'+
         '</div>'
     },  {
@@ -79,10 +75,9 @@ var locations = [
         '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">Earthrite Textile Recycling</h1>'+
+            '<h1 id="firstHeading" class="firstHeading"><a href="https://plus.google.com/113257260254977162301/about?hl=en" target="_blank">Earthrite Textile Recycling</a></h1>'+
             '<div id="bodyContent">'+
-                '<p>Description here...</p>'+
-                '<p>Link title... <a href="#"</a></p>'+
+                '<p>2073 5th Ave, Ronkonkoma, NY</p>'+
             '</div>'+
         '</div>'
     },  {
@@ -95,10 +90,9 @@ var locations = [
         '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">Millbury Textile Recycling</h1>'+
+            '<h1 id="firstHeading" class="firstHeading"><a href="http://www.millburyrecycling.com/" target="_blank">Millbury Textile Recycling</a></h1>'+
             '<div id="bodyContent">'+
-                '<p>Description here...</p>'+
-                '<p>Link title... <a href="#"</a></p>'+
+                '<p>4 Lincoln Ave, Millbury, MA <br> (508) 865-1717</p>'+
             '</div>'+
         '</div>'
     }, {
@@ -111,10 +105,9 @@ var locations = [
         '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">Miller Waste Mills Inc</h1>'+
+            '<h1 id="firstHeading" class="firstHeading"><a href="http://www.millerwastemills.com/" target="_blank">Miller Waste Mills Inc</a></h1>'+
             '<div id="bodyContent">'+
-                '<p>Description here...</p>'+
-                '<p>Link title... <a href="#"</a></p>'+
+                '<p>580 E Front St, Winona, MN <br> (507) 454-6906</p>'+
             '</div>'+
         '</div>'
     }, {
@@ -127,10 +120,9 @@ var locations = [
         '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">Retex</h1>'+
+            '<h1 id="firstHeading" class="firstHeading"><a href="http://www.retexnorthwest.com/" target="_blank">Retex</a></h1>'+
             '<div id="bodyContent">'+
-                '<p>Description here...</p>'+
-                '<p>Link title... <a href="#"</a></p>'+
+                '<p>412 164th St SW, Lynnwood, WA 98087</p>'+
             '</div>'+
         '</div>'
     }, {
@@ -143,10 +135,9 @@ var locations = [
         '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">San Francisco Department of the Environment</h1>'+
+            '<h1 id="firstHeading" class="firstHeading"><a href="http://www.sfenvironment.org/" target="_blank">San Francisco Department of the Environment</a></h1>'+
             '<div id="bodyContent">'+
-                '<p>Description here...</p>'+
-                '<p>Link title... <a href="#"</a></p>'+
+                '<p>1455 E Market St #1200, San Francisco, CA 94103</p>'+
             '</div>'+
         '</div>'    
     }, {
@@ -159,10 +150,9 @@ var locations = [
         '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">A & E Textile Recovery</h1>'+
+            '<h1 id="firstHeading" class="firstHeading"><a href="http://aetextilerecovery.com/" target="_blank">A & E Textile Recovery</a></h1>'+
             '<div id="bodyContent">'+
-                '<p>Description here...</p>'+
-                '<p>Link title... <a href="#"</a></p>'+
+                '<p>2365 Via Segundo, San Diego, CA 92173</p>'+
             '</div>'+
         '</div>'    
     } 
@@ -170,6 +160,52 @@ var locations = [
 
 
 
+
+//make array of 10 objects to 
+var rec1_zips = ['39', '70', '71', '72', '73', '74', '75', '76', '77', '78', '79']
+
+var rec2_zips = ['27', '28', '29', '30', '31', '35', '36', '37', '38']
+
+var rec3_zips = ['32', '33', '34']
+
+var rec4_zips = ['40', '41', '42', '43', '44', '45', '46', '47', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69']
+
+var rec5_zips = ['07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26']
+
+var rec6_zips = ['00', '01', '02', '03', '04', '05', '06']
+
+var rec7_zips = ['48', '49', '50', '51', '52', '53', '54', '55', '56', '57', '58', '59']
+
+var rec8_zips = ['82', '83', '97', '98', '99']
+
+var rec9_zips = ['84', '89', '93', '94', '95', '96']
+
+var rec10_zips = ['80', '81', '85', '86', '87', '88', '90', '91', '92']
+
+//underscore 'indexof' tells you where in array the match is found
+
+//Tim's method
+// var zips = [
+// 	{rec1_zips: [39, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79]},
+// 	{rec2_zips: [27, 28, 29, 30, 31, 35, 36, 37, 38]},
+// 	{rec3_zips: [32, 33, 34]},
+// 	{rec4_zips: [40, 41, 42, 43, 44, 45, 46, 47, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69]},
+// 	{rec5_zips: [07, 08, 09, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26]},
+// 	{rec6_zips: [00, 01, 02, 03, 04, 05, 06]},
+// 	{rec7_zips: [48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59]},
+// 	{rec8_zips: [82, 83, 97, 98, 99]},
+// 	{rec9_zips: [84, 89, 93, 94, 95, 96]},
+// 	{rec10_zips: [80, 81, 85, 86, 87, 88, 90, 91, 92]}
+// ];
+
+
+// _.each(zips, function (z) {
+//   _.each(z, function (a) {
+//     if (a.indexOf(45) !== -1){
+//       return console.log(z);
+//     }
+//   });
+// });
 
 (function( $ ) {
 	var requests = {};
@@ -248,7 +284,6 @@ var HomePageView = Backbone.View.extend({
 	 	var request = new RequestPageView();
 		$(".pageContainer").html(request.el);
 		formPlugin();
-		//$(this).trigger(formPlugin); ?????????????
 	}
 	
 
@@ -275,15 +310,147 @@ var RequestPageView = Backbone.View.extend({
 	},
 
 	submitForm: function (event) {
-			event.preventDefault();
-      alert("All done. Where's my box?");
-      var confirm = new ConfirmPageView();
-			$(".zombieContainer").html(confirm.el);
-			$(".pageContainer").hide();
-      // var userZip = this.get($('#zip').val());
-      // console.log(userZip);
-   }
+		event.preventDefault();
+    alert("All done. Where's my box?");
+    var confirm = new ConfirmPageView();
+		$(".zombieContainer").html(confirm.el);
+		$(".pageContainer").hide();
 
+    // Get user zip
+    var userZip = $('#zip').val();
+    console.log(userZip);
+    // Grab first two digits of user zip
+    var twoDigits = userZip.substring(0, 2);
+	  console.log(twoDigits);
+    // Loop through array of zip categories and pair the entry with a rec center.
+    	// The indexOf() method returns the first index at which a given element can be found in the array, or -1 if it is not present.
+    
+    //Set up a loop:
+
+    // for(i = 1; i < 10)
+
+		// var arrayScan1 = rec1_zips.indexOf(twoDigits);
+		// var arrayScan2 = rec2_zips.indexOf(twoDigits);
+		// var arrayScan3 = rec3_zips.indexOf(twoDigits);
+		// var arrayScan4 = rec4_zips.indexOf(twoDigits);
+		// var arrayScan5 = rec5_zips.indexOf(twoDigits);
+		// var arrayScan6 = rec6_zips.indexOf(twoDigits);
+		// var arrayScan7 = rec7_zips.indexOf(twoDigits);
+		// var arrayScan8 = rec8_zips.indexOf(twoDigits);
+		// var arrayScan9 = rec9_zips.indexOf(twoDigits);
+		// var arrayScan10 = rec10_zips.indexOf(twoDigits);
+
+  //   console.log(arrayScan1);
+  //   console.log(arrayScan2);
+  //   console.log(arrayScan3);
+  //   console.log(arrayScan4);
+  //   console.log(arrayScan5);
+  //   console.log(arrayScan6);
+  //   console.log(arrayScan7);
+  //   console.log(arrayScan8);
+  //   console.log(arrayScan9);
+  //   console.log(arrayScan10);
+
+   	var arrayScan1 = _.indexOf(rec1_zips, twoDigits);
+   	if (arrayScan1 !== -1){
+      return console.log('Matched to rec1!');
+    };
+ 		console.log(arrayScan1);
+
+   	var arrayScan2 = _.indexOf(rec2_zips, twoDigits);
+	   	if (arrayScan2 !== -1){
+	      return console.log('Matched to rec2!');
+	      // NOT WORKING: REPURPOSING INFO WINDOW FUNCTION
+	   //    var autoInfo = (locations, function (data) {
+	   //     	var marker = new google.maps.Marker({
+	   //          position: new google.maps.LatLng(32.946979,-80.624673),
+	   //          map: map,
+	   //          title: data.title,
+	   //          icon: data.icon
+	   //      });
+	   //     	console.log(marker);
+
+	   //     	var infowindow = new google.maps.InfoWindow({
+	   //         content: data.content
+	   //      });
+	      
+	   //    	// google.maps.event.addListener(marker, 'click', function () {
+    //         infowindow.open(map, marker);
+    //     	// })
+				// });
+
+	    };
+ 		console.log(arrayScan2);
+
+ 		var arrayScan3 = _.indexOf(rec3_zips, twoDigits);
+   	if (arrayScan3 !== -1){
+      return console.log('Matched to rec3!');
+    };
+ 		console.log(arrayScan3);
+
+   	var arrayScan4 = _.indexOf(rec4_zips, twoDigits);
+   	if (arrayScan4 !== -1){
+      return console.log('Matched to rec4!');
+    };
+ 		console.log(arrayScan4);
+
+ 		var arrayScan5 = _.indexOf(rec5_zips, twoDigits);
+   	if (arrayScan5 !== -1){
+      return console.log('Matched to rec5!');
+    };
+ 		console.log(arrayScan5);
+
+   	var arrayScan6 = _.indexOf(rec6_zips, twoDigits);
+   	if (arrayScan6 !== -1){
+      return console.log('Matched to rec6!');
+    };
+ 		console.log(arrayScan6);
+
+ 		var arrayScan7 = _.indexOf(rec7_zips, twoDigits);
+   	if (arrayScan7 !== -1){
+      return console.log('Matched to rec7!');
+    };
+ 		console.log(arrayScan7);
+
+   	var arrayScan8 = _.indexOf(rec8_zips, twoDigits);
+   	if (arrayScan8 !== -1){
+      return console.log('Matched to rec8!');
+    };
+ 		console.log(arrayScan8);
+
+ 		var arrayScan9 = _.indexOf(rec9_zips, twoDigits);
+   	if (arrayScan9 !== -1){
+      return console.log('Matched to rec9!');
+    };
+ 		console.log(arrayScan9);
+
+   	var arrayScan10 = _.indexOf(rec10_zips, twoDigits);
+   	if (arrayScan10 !== -1){
+      return console.log('Matched to rec10!');
+    };
+ 		console.log(arrayScan10);
+
+// DID NOT WORK
+ 		// var arrayScan = function() {
+ 		// 	_.indexOf(rec1_zips, twoDigits);
+ 		// 	_.indexOf(rec2_zips, twoDigits);
+ 		// 	_.indexOf(rec3_zips, twoDigits);
+ 		// };
+ 		// console.log(arrayScan);
+
+		// while (arrayScan != -1) {
+
+    // };
+
+    // _.each(zips, function (z) {
+//   _.each(z, function (a) {
+//     if (a.indexOf(45) !== -1){
+//       return console.log(z);
+//     }
+//   });
+// });
+  }
+    // Then I need move the map / zoom in on center and show info window.
 })
 var ConfirmPageView = Backbone.View.extend({
 	
@@ -300,6 +467,7 @@ var ConfirmPageView = Backbone.View.extend({
 	render: function() {
 		var template =  $('#confirm-template').html();
 		this.$el.html(template);
+		
 		//zoom on map's match????????????
 	},
 
@@ -447,5 +615,14 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 // END OF GOOGLE MAP ///////////////////////////////////////////////////////////////////////
 
+// ZIP MATCH FUNCTION ///////////////////////////////////////////////////////////////////////
+// var zipMatch = function() {
+//     // var userZip = $('#zip').val();
+//     // console.log(userZip);
+//     // I need to grab the first two digits of userZip
+//     // var twoDigits = $(this).attr("title").substr(0, 2);
+//     var twoDigits = $('userZip').substr(0, 2);
+//     console.log('twoDigits');
+// };
 
 

@@ -141,5 +141,14 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 // END OF GOOGLE MAP ///////////////////////////////////////////////////////////////////////
 
+// ZIP MATCH FUNCTION ///////////////////////////////////////////////////////////////////////
+// var zipMatch = function() {
+//     // var userZip = $('#zip').val();
+//     // console.log(userZip);
+//     // I need to grab the first two digits of userZip
+//     // var twoDigits = $(this).attr("title").substr(0, 2);
+//     var twoDigits = $('userZip').substr(0, 2);
+//     console.log('twoDigits');
+// };
 
 
