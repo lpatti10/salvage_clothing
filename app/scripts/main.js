@@ -13,8 +13,8 @@ $(".pageContainer").html(home.el);
 
 // ZIPTASTIC FORM PLUGIN ///////////////////////////////////////////////////////////////////////
 var formPlugin = function() {
-(function($) {
-    $(function() {
+// (function($) {
+//     $(function() {
         var duration = 500;
 
         var elements = {
@@ -62,8 +62,8 @@ var formPlugin = function() {
                 elements.phone.val(phone).parent().show();
                 elements.email.val(email).parent().show();
             });
-    });
-}(jQuery));
+//     });
+// }(jQuery));
 };
 
 // SUBMIT FORM MATCH + ZOOM  /////////////////////////////////////////////////////////////////////////////

@@ -247,7 +247,8 @@ var HomePageView = Backbone.View.extend({
 	 	alert("Send me a box");
 	 	var request = new RequestPageView();
 		$(".pageContainer").html(request.el);
-		// this.formPlugin() ???????????????????
+		formPlugin();
+		//$(this).trigger(formPlugin); ?????????????
 	}
 	
 
@@ -274,9 +275,11 @@ var RequestPageView = Backbone.View.extend({
 	},
 
 	submitForm: function (event) {
+			event.preventDefault();
       alert("All done. Where's my box?");
       var confirm = new ConfirmPageView();
-			$(".pageContainer").html(confirm.el);
+			$(".zombieContainer").html(confirm.el);
+			$(".pageContainer").hide();
       // var userZip = this.get($('#zip').val());
       // console.log(userZip);
    }
@@ -316,8 +319,8 @@ $(".pageContainer").html(home.el);
 
 // ZIPTASTIC FORM PLUGIN ///////////////////////////////////////////////////////////////////////
 var formPlugin = function() {
-(function($) {
-    $(function() {
+// (function($) {
+//     $(function() {
         var duration = 500;
 
         var elements = {
@@ -365,8 +368,8 @@ var formPlugin = function() {
                 elements.phone.val(phone).parent().show();
                 elements.email.val(email).parent().show();
             });
-    });
-}(jQuery));
+//     });
+// }(jQuery));
 };
 
 // SUBMIT FORM MATCH + ZOOM  /////////////////////////////////////////////////////////////////////////////

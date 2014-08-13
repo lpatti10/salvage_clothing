@@ -16,9 +16,11 @@ var RequestPageView = Backbone.View.extend({
 	},
 
 	submitForm: function (event) {
+			event.preventDefault();
       alert("All done. Where's my box?");
       var confirm = new ConfirmPageView();
-			$(".pageContainer").html(confirm.el);
+			$(".zombieContainer").html(confirm.el);
+			$(".pageContainer").hide();
       // var userZip = this.get($('#zip').val());
       // console.log(userZip);
    }
