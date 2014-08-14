@@ -11,6 +11,7 @@ var RequestPageView = Backbone.View.extend({
 	},
 
 	render: function() {
+    $('#map-canvas2').hide();
 		var template =  $('#request-template').html();
 		this.$el.html(template);
 	},

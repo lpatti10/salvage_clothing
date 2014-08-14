@@ -11,6 +11,7 @@ var HomePageView = Backbone.View.extend({
 	},
 
 	render: function() {
+		// $('#map-canvas2').hide();
 		var template =  $('#home-template').html();
 		this.$el.html(template);
 	},

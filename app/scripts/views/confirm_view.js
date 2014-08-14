@@ -11,10 +11,16 @@ var ConfirmPageView = Backbone.View.extend({
 	},
 
 	render: function() {
+		//Testing hiding default map = SUCCESS!
+		$('#map-canvas').hide();
+		$('#map-canvas2').show();
 		var template =  $('#confirm-template').html();
 		this.$el.html(template);
 		
-		//zoom on map's match????????????
+		//Repeating map function here as resulting zoom:
+
+
+
 	},
 
 })

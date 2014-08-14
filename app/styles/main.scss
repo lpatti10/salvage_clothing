@@ -360,25 +360,54 @@ form label, form input {
 // }
 ///////////////////////////////////////////////// MAP //////////////////////////////////////////////
 
-#map-canvas {
+#map-canvas, #map-canvas2 {
   height: 100%;
   width: 100%;
-}
-
-#content {
-  width: 100%;
-  height: 100%;
- .firstHeading {
-    font-family: 'Droid Serif', serif;
-    font-size: 1.5em;
-    >a {
-      color: $primary-accent-color; 
-      &:hover {
-        text-decoration: underline;
+  .gm-style {
+    div { // DO NOT STYLE
+      div { // DO NOT STYLE
+        div { // DO NOT STYLE
+          div { 
+            img {
+              max-width: none;
+            }
+            .gm-style-iw {
+              #content {
+                width: 100%;
+                height: 100%;
+                .firstHeading {
+                  font-family: 'Droid Serif', serif;
+                  font-size: 1.3em;
+                  >a {
+                    color: $primary-accent-color; 
+                    &:hover {
+                      text-decoration: underline;
+                    }
+                  }
+                } 
+              }
+            }
+          }
+        }
       }
     }
-  } 
+  }
 }
+
+// #content {
+//   width: 100%;
+//   height: 100%;
+//  .firstHeading {
+//     font-family: 'Droid Serif', serif;
+//     font-size: 1.5em;
+//     >a {
+//       color: $primary-accent-color; 
+//       &:hover {
+//         text-decoration: underline;
+//       }
+//     }
+//   } 
+// }
 
 
 ///////////////////////////////////////////////// FOOTER //////////////////////////////////////////////

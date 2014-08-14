@@ -106,21 +106,39 @@ function initialize() {
         // scaleControl: false,
         // overviewMapControl: false
     };
+//Successful at zooming in on map 2!
+    var mapOptions2 = {
+        center: new google.maps.LatLng(32.946979,-80.624673),
+        zoom: 8,
+        //Prevents zoom on scroll
+        scrollwheel: false,
+        //Next 3 controllers look distorted when rendered
+        panControl: false,
+        zoomControl: false,
+        streetViewControl: false
+        // mapTypeControl: false,
+        // scaleControl: false,
+        // overviewMapControl: false
+    };
 
     // A "map" object, passing it the div element and the map properties.
     var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
-
+//Successful at adding map 2 to element!
+    var map2 = new google.maps.Map(document.getElementById("map-canvas2"), mapOptions2);
 
     //Associate the styled map with the MapTypeId and set it to display.
     map.mapTypes.set('map_style', styledMap);
     map.setMapTypeId('map_style');
-
+    
+//Successful at styling map 2!
+    map2.mapTypes.set('map_style', styledMap);
+    map2.setMapTypeId('map_style');
     
     _.each(locations, function (data) {
         
         var marker = new google.maps.Marker({
             position: data.position,
-            map: map,
+            map: map, 
             title: data.title,
             icon: data.icon
         });
@@ -134,6 +152,37 @@ function initialize() {
         })
         
     });
+
+//Attempting per/map marker+info window function
+
+//_.where name=
+        // _.each(locations, function (data) {
+        // _.where(locations, {name: "rec2"}) 
+        var marker2 = new google.maps.Marker({
+            position: new google.maps.LatLng(32.946979,-80.624673),
+            map: map2, 
+            title: "Carolina Textile Recycling",
+            icon: longjohns
+        });
+        
+        var infowindow2 = new google.maps.InfoWindow({
+            // content: data.content
+            content: 
+            '<div id="content">'+
+                '<div id="siteNotice">'+
+                '</div>'+
+                '<h1 id="firstHeading" class="firstHeading"><a href="https://plus.google.com/105428587463519345659/about?gl=us&hl=en" target="_blank">Carolina Textile Recycling</a></h1>'+
+                '<div id="bodyContent">'+
+                    '<p>68 Anderson Rd, Walterboro, SC <br> (843) 538-8644</p>'+
+                '</div>'+
+            '</div>'
+        });
+        
+        // google.maps.event.addListener(marker, 'click', function () {
+            infowindow2.open(map2, marker2);
+        // })
+        
+    // });
 
 }
 
@@ -150,5 +199,4 @@ google.maps.event.addDomListener(window, 'load', initialize);
 //     var twoDigits = $('userZip').substr(0, 2);
 //     console.log('twoDigits');
 // };
-
 
