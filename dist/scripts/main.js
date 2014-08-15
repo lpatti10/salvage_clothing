@@ -275,16 +275,34 @@ var HomePageView = Backbone.View.extend({
 	},
 
 	render: function() {
-		$('#map-canvas1').hide();
-		$('#map-canvas2').hide();
-		$('#map-canvas3').hide();
-		$('#map-canvas4').hide();
-		$('#map-canvas5').hide();
-		$('#map-canvas6').hide();
-		$('#map-canvas7').hide();
-		$('#map-canvas8').hide();
-		$('#map-canvas9').hide();
-		$('#map-canvas10').hide();
+
+		// $('#map-canvas1').css({'display':'none'});
+
+//Works but doesn't load fully on reset to 100%
+		// $('#map-canvas1').css({'height':'0px'});
+		// $('#map-canvas2').css({'height':'0px'});
+		// $('#map-canvas3').css({'height':'0px'});
+		// $('#map-canvas4').css({'height':'0px'});
+		// $('#map-canvas5').css({'height':'0px'});
+		// $('#map-canvas6').css({'height':'0px'});
+		// $('#map-canvas7').css({'height':'0px'});
+		// $('#map-canvas8').css({'height':'0px'});
+		// $('#map-canvas9').css({'height':'0px'});
+		// $('#map-canvas10').css({'height':'0px'});
+
+
+
+//Works but doesn't load fully on reset to 100%
+		$('#map-canvas1').css({'visibility':'hidden', 'height':'0px'});
+		$('#map-canvas2').css({'visibility':'hidden', 'height':'0px'});
+		$('#map-canvas3').css({'visibility':'hidden', 'height':'0px'});
+		$('#map-canvas4').css({'visibility':'hidden', 'height':'0px'});
+		$('#map-canvas5').css({'visibility':'hidden', 'height':'0px'});
+		$('#map-canvas6').css({'visibility':'hidden', 'height':'0px'});
+		$('#map-canvas7').css({'visibility':'hidden', 'height':'0px'});
+		$('#map-canvas8').css({'visibility':'hidden', 'height':'0px'});
+		$('#map-canvas9').css({'visibility':'hidden', 'height':'0px'});
+		$('#map-canvas10').css({'visibility':'hidden', 'height':'0px'});
 
 		var template =  $('#home-template').html();
 		this.$el.html(template);
@@ -335,6 +353,10 @@ var RequestPageView = Backbone.View.extend({
     // Grab first two digits of user zip
     var twoDigits = userZip.substring(0, 2);
 	  console.log(twoDigits);
+    
+
+
+
     // Loop through array of zip categories and pair the entry with a rec center.
     	// The indexOf() method returns the first index at which a given element can be found in the array, or -1 if it is not present.
     
@@ -367,6 +389,9 @@ var RequestPageView = Backbone.View.extend({
    	var arrayScan1 = _.indexOf(rec1_zips, twoDigits);
    	if (arrayScan1 !== -1){
       return console.log('Matched to rec1!');
+      // Doesn't work :(
+      // $('#map-canvas1').css({'visibility':'visible', 'height':'100%'});
+
     };
  		console.log(arrayScan1);
 
@@ -436,9 +461,7 @@ var RequestPageView = Backbone.View.extend({
 
     // };
 
-
   }
-    // Then I need move the map / zoom in on center and show info window.
 })
 var ConfirmPageView = Backbone.View.extend({
 	
@@ -450,40 +473,55 @@ var ConfirmPageView = Backbone.View.extend({
 
 	initialize: function() {
 		this.render();
-		// this.render('initialize()', 2000);
-		// onLoad="setTimeout('initialize()', 2000);"
+
 	},
 
 	render: function() {
+		// this.render('initialize()', 2000);
+		// onLoad="setTimeout('initialize()', 2000);"
+
+			// var template = Handlebars.compile($('#confirm-template').html());
+			// this.$el.html(rendered);
+			// $('#map-canvas1').css({'height':'100%'});
+
+			// function displayMap() {
+   //        document.getElementById('map_canvas1').style.display="block";
+   //        initialize();
+   //    }
+
+		// $('#map-canvas1').css({'display':'block'});
 		
-		// var template = Handlebars.compile($('#confirm-template').html());
-		// this.$el.html(rendered);
+			// $('#map-canvas').hide();  	var arrayScan1 = _.indexOf(rec1_zips, twoDigits);
+   
 
-		//Testing hiding default map = SUCCESS!
-		$('#map-canvas').hide();
+    $('#map-canvas1').css({'visibility':'visible', 'height':'100%'});
 
-		// need an "if" (this) then "show" (this map) statement 
-		//to match result map 1-10 to array match!!!!!!!!!!!!!!!!!!!!
 
-		$('#map-canvas1').show();
-		// $('#map-canvas2').show();
-		// $('#map-canvas3').show();
-		// $('#map-canvas4').show();
-		// $('#map-canvas5').show();
-		// $('#map-canvas6').show();
-		// $('#map-canvas7').show();
-		// $('#map-canvas8').show();
-		// $('#map-canvas9').show();
-		// $('#map-canvas10').show();
+			
 
-		var template =  $('#confirm-template').html();
-		this.$el.html(template);
-		
 
-		
+			// need an "if" (this) then "show" (this map) statement 
+			//to match result map 1-10 to array match!!!!!!!!!!!!!!!!!!!!
+
+			// $('#map-canvas1').css({'visibility':'visible'});
+			// $('#map-canvas2').css({'visibility':'visible'});
+			// $('#map-canvas3').css({'visibility':'visible'});
+			// $('#map-canvas4').css({'visibility':'visible'});
+			// $('#map-canvas5').css({'visibility':'visible'});
+			// $('#map-canvas6').css({'visibility':'visible'});
+			// $('#map-canvas7').css({'visibility':'visible'});
+			// $('#map-canvas8').css({'visibility':'visible'});
+			// $('#map-canvas9').css({'visibility':'visible'});
+			// $('#map-canvas10').css({'visibility':'visible'});
+
+			var template =  $('#confirm-template').html();
+			this.$el.html(template);
+			
 	},
-
 })
+//Declare global variable for user_loc_map as empty string, then update based on submission
+
+
 // Instance of Home Page
 var home = new HomePageView();
 $(".pageContainer").html(home.el);
@@ -809,6 +847,7 @@ function initialize() {
             '<div id="content">'+
                 '<div id="siteNotice">'+
                 '</div>'+
+                '<p>YOUR GOODS WILL BE PROCESSED AT:</p>'+
                 '<h1 id="firstHeading" class="firstHeading"><a href="http://atrscorp.com" target="_blank">American Textile Recycling</a></h1>'+
                 '<div id="bodyContent">'+
                     '<p>10739 W Little York Rd #100, Houston, TX <br> (713) 856-6170</p>'+
@@ -820,6 +859,7 @@ function initialize() {
             '<div id="content">'+
                 '<div id="siteNotice">'+
                 '</div>'+
+                '<p>YOUR GOODS WILL BE PROCESSED AT:</p>'+
                 '<h1 id="firstHeading" class="firstHeading"><a href="https://plus.google.com/105428587463519345659/about?gl=us&hl=en" target="_blank">Carolina Textile Recycling</a></h1>'+
                 '<div id="bodyContent">'+
                     '<p>68 Anderson Rd, Walterboro, SC <br> (843) 538-8644</p>'+
@@ -831,6 +871,7 @@ function initialize() {
             '<div id="content">'+
                 '<div id="siteNotice">'+
                 '</div>'+
+                '<p>YOUR GOODS WILL BE PROCESSED AT:</p>'+
                 '<h1 id="firstHeading" class="firstHeading"><a href="https://plus.google.com/102660832478251858597/about?hl=en" target="_blank">Suncoast Textile Recycling</a></h1>'+
                 '<div id="bodyContent">'+
                     '<p>201 22nd St S, St Petersburg, FL <br> (727) 729-2862</p>'+
@@ -842,6 +883,7 @@ function initialize() {
             '<div id="content">'+
                 '<div id="siteNotice">'+
                 '</div>'+
+                '<p>YOUR GOODS WILL BE PROCESSED AT:</p>'+
                 '<h1 id="firstHeading" class="firstHeading"><a href="http://www.usagain.com" target="_blank">USAgain</a></h1>'+
                 '<div id="bodyContent">'+
                     '<p>1113 N Warson Rd, St Louis, MO <br> (314) 291-0046</p>'+
@@ -853,6 +895,7 @@ function initialize() {
             '<div id="content">'+
                 '<div id="siteNotice">'+
                 '</div>'+
+                '<p>YOUR GOODS WILL BE PROCESSED AT:</p>'+
                 '<h1 id="firstHeading" class="firstHeading"><a href="https://plus.google.com/113257260254977162301/about?hl=en" target="_blank">Earthrite Textile Recycling</a></h1>'+
                 '<div id="bodyContent">'+
                     '<p>2073 5th Ave, Ronkonkoma, NY</p>'+
@@ -864,6 +907,7 @@ function initialize() {
             '<div id="content">'+
                 '<div id="siteNotice">'+
                 '</div>'+
+                '<p>YOUR GOODS WILL BE PROCESSED AT:</p>'+
                 '<h1 id="firstHeading" class="firstHeading"><a href="http://www.millburyrecycling.com/" target="_blank">Millbury Textile Recycling</a></h1>'+
                 '<div id="bodyContent">'+
                     '<p>4 Lincoln Ave, Millbury, MA <br> (508) 865-1717</p>'+
@@ -875,6 +919,7 @@ function initialize() {
             '<div id="content">'+
                 '<div id="siteNotice">'+
                 '</div>'+
+                '<p>YOUR GOODS WILL BE PROCESSED AT:</p>'+
                 '<h1 id="firstHeading" class="firstHeading"><a href="http://www.millerwastemills.com/" target="_blank">Miller Waste Mills Inc</a></h1>'+
                 '<div id="bodyContent">'+
                     '<p>580 E Front St, Winona, MN <br> (507) 454-6906</p>'+
@@ -886,6 +931,7 @@ function initialize() {
             '<div id="content">'+
                 '<div id="siteNotice">'+
                 '</div>'+
+                '<p>YOUR GOODS WILL BE PROCESSED AT:</p>'+
                 '<h1 id="firstHeading" class="firstHeading"><a href="http://www.retexnorthwest.com/" target="_blank">Retex</a></h1>'+
                 '<div id="bodyContent">'+
                     '<p>412 164th St SW, Lynnwood, WA 98087</p>'+
@@ -897,6 +943,7 @@ function initialize() {
             '<div id="content">'+
                 '<div id="siteNotice">'+
                 '</div>'+
+                '<p>YOUR GOODS WILL BE PROCESSED AT:</p>'+
                 '<h1 id="firstHeading" class="firstHeading"><a href="http://www.sfenvironment.org/" target="_blank">San Francisco D.O.E.</a></h1>'+
                 '<div id="bodyContent">'+
                     '<p>1455 E Market St #1200, San Francisco, CA 94103</p>'+
@@ -908,6 +955,7 @@ function initialize() {
             '<div id="content">'+
                 '<div id="siteNotice">'+
                 '</div>'+
+                '<p>YOUR GOODS WILL BE PROCESSED AT:</p>'+
                 '<h1 id="firstHeading" class="firstHeading"><a href="http://aetextilerecovery.com/" target="_blank">A & E Textile Recovery</a></h1>'+
                 '<div id="bodyContent">'+
                     '<p>2365 Via Segundo, San Diego, CA 92173</p>'+

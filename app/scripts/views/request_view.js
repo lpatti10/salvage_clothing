@@ -29,6 +29,10 @@ var RequestPageView = Backbone.View.extend({
     // Grab first two digits of user zip
     var twoDigits = userZip.substring(0, 2);
 	  console.log(twoDigits);
+    
+
+
+
     // Loop through array of zip categories and pair the entry with a rec center.
     	// The indexOf() method returns the first index at which a given element can be found in the array, or -1 if it is not present.
     
@@ -61,6 +65,9 @@ var RequestPageView = Backbone.View.extend({
    	var arrayScan1 = _.indexOf(rec1_zips, twoDigits);
    	if (arrayScan1 !== -1){
       return console.log('Matched to rec1!');
+      // Doesn't work :(
+      // $('#map-canvas1').css({'visibility':'visible', 'height':'100%'});
+
     };
  		console.log(arrayScan1);
 
@@ -130,7 +137,5 @@ var RequestPageView = Backbone.View.extend({
 
     // };
 
-
   }
-    // Then I need move the map / zoom in on center and show info window.
 })
