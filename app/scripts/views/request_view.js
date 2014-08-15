@@ -11,14 +11,14 @@ var RequestPageView = Backbone.View.extend({
 	},
 
 	render: function() {
-    $('#map-canvas2').hide();
+    $('#map-canvas').hide();
 		var template =  $('#request-template').html();
 		this.$el.html(template);
 	},
 
 	submitForm: function (event) {
 		event.preventDefault();
-    alert("All done. Where's my box?");
+    // alert("All done. Where's my box?");
     var confirm = new ConfirmPageView();
 		$(".zombieContainer").html(confirm.el);
 		$(".pageContainer").hide();
@@ -67,26 +67,7 @@ var RequestPageView = Backbone.View.extend({
    	var arrayScan2 = _.indexOf(rec2_zips, twoDigits);
 	   	if (arrayScan2 !== -1){
 	      return console.log('Matched to rec2!');
-	      // NOT WORKING: REPURPOSING INFO WINDOW FUNCTION
-	   //    var autoInfo = (locations, function (data) {
-	   //     	var marker = new google.maps.Marker({
-	   //          position: new google.maps.LatLng(32.946979,-80.624673),
-	   //          map: map,
-	   //          title: data.title,
-	   //          icon: data.icon
-	   //      });
-	   //     	console.log(marker);
-
-	   //     	var infowindow = new google.maps.InfoWindow({
-	   //         content: data.content
-	   //      });
-	      
-	   //    	// google.maps.event.addListener(marker, 'click', function () {
-    //         infowindow.open(map, marker);
-    //     	// })
-				// });
-
-	    };
+    };
  		console.log(arrayScan2);
 
  		var arrayScan3 = _.indexOf(rec3_zips, twoDigits);
@@ -149,13 +130,7 @@ var RequestPageView = Backbone.View.extend({
 
     // };
 
-    // _.each(zips, function (z) {
-//   _.each(z, function (a) {
-//     if (a.indexOf(45) !== -1){
-//       return console.log(z);
-//     }
-//   });
-// });
+
   }
     // Then I need move the map / zoom in on center and show info window.
 })

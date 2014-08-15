@@ -129,13 +129,13 @@ var locations = [
         name: 'rec9', 
         position: new google.maps.LatLng(37.7756117,-122.4179582),
         // map: map,
-        title:"San Francisco Department of the Environment",
+        title:"San Francisco D.O.E.",
         icon: longjohns,
         content: 
         '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
-            '<h1 id="firstHeading" class="firstHeading"><a href="http://www.sfenvironment.org/" target="_blank">San Francisco Department of the Environment</a></h1>'+
+            '<h1 id="firstHeading" class="firstHeading"><a href="http://www.sfenvironment.org/" target="_blank">San Francisco D.O.E.</a></h1>'+
             '<div id="bodyContent">'+
                 '<p>1455 E Market St #1200, San Francisco, CA 94103</p>'+
             '</div>'+
