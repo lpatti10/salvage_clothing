@@ -83,6 +83,9 @@ var formPlugin = function() {
 // An object literal to hold a number of map properties.
 function initialize() {
     // Added below for styled map??????????????????
+    var shirt_lg = '../images/shirt_lg.png';
+    var longjohns_lg = '../images/longjohns_lg.png';
+
     var styles = [
       {
         featureType: '',
@@ -191,7 +194,7 @@ function initialize() {
         streetViewControl: false
     };
 
-    // A "map" object, passing it the div element and the map properties.
+    // "map" objects, passing them the div element and the map properties.
     var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
     var map1 = new google.maps.Map(document.getElementById("map-canvas1"), mapOptions1);
     var map2 = new google.maps.Map(document.getElementById("map-canvas2"), mapOptions2);
@@ -258,67 +261,67 @@ function initialize() {
     });
 
 
-        // _.each(locations, function (data) {
-        // _.where(locations, {name: "rec2"}) 
+        // _.each(locations, function (data) ...?
+        // _.where(locations, {name: "rec2"}) ...?
         var marker1 = new google.maps.Marker({
             position: new google.maps.LatLng(29.865911,-95.566727),
             map: map1, 
             title: "American Textile Recycling",
-            icon: longjohns
+            icon: longjohns_lg
         });
         var marker2 = new google.maps.Marker({
             position: new google.maps.LatLng(32.946979,-80.624673),
             map: map2, 
             title: "Carolina Textile Recycling",
-            icon: shirt
+            icon: shirt_lg
         });
         var marker3 = new google.maps.Marker({
             position: new google.maps.LatLng(27.7692544,-82.6630569),
             map: map3, 
             title: "Suncoast Textile Recycling",
-            icon: longjohns
+            icon: longjohns_lg
         });
         var marker4 = new google.maps.Marker({
             position: new google.maps.LatLng(38.6791963,-90.3947229),
             map: map4, 
             title: "USAgain",
-            icon: shirt
+            icon: shirt_lg
         });
         var marker5 = new google.maps.Marker({
             position: new google.maps.LatLng(40.7914948,-73.1382576),
             map: map5, 
             title: "Earthrite Textile Recycling",
-            icon: longjohns
+            icon: longjohns_lg
         });
         var marker6 = new google.maps.Marker({
             position: new google.maps.LatLng(42.19606,-71.75631),
             map: map6, 
             title: "Millbury Textile Recycling",
-            icon: shirt
+            icon: shirt_lg
         });
         var marker7 = new google.maps.Marker({
             position: new google.maps.LatLng(44.050317,-91.6214551),
             map: map7, 
             title: "Miller Waste Mills Inc",
-            icon: longjohns
+            icon: longjohns_lg
         });
         var marker8 = new google.maps.Marker({
             position: new google.maps.LatLng(47.8487843,-122.2389721),
             map: map8, 
             title: "Retex",
-            icon: shirt
+            icon: shirt_lg
         });
         var marker9 = new google.maps.Marker({
             position: new google.maps.LatLng(37.7756117,-122.4179582),
             map: map9, 
             title: "San Francisco D.O.E.",
-            icon: longjohns
+            icon: longjohns_lg
         });
         var marker10 = new google.maps.Marker({
             position: new google.maps.LatLng(32.552842,-117.052538),
             map: map10, 
             title: "A & E Textile Recovery",
-            icon: shirt
+            icon: shirt_lg
         });
 
         var infowindow1 = new google.maps.InfoWindow({

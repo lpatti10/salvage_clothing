@@ -12,8 +12,8 @@ $sans-serif-body:'Open Sans', sans-serif;
 $sans-serif-display: 'Oswald', sans-serif;
 
 $primary-dark-color: #3C474D; //brown #271D17
-$primary-light-color: #E0DCCC; //ecru #F7FAE7; #d6d6c9
-$primary-accent-color: #D7624E; //yellow #FFD21D; #DC4A41
+$primary-light-color: #E1DED2; //#E0DCCC; //ecru #F7FAE7 #d6d6c9
+$primary-accent-color: #0AD795; //#55E1D9; //#33CCFF; //green:  //#D7624E #FFD21D #DC4A41
 $primary-lightest-color: #F2F0E6;
 
 html{
@@ -42,22 +42,32 @@ header {
   z-index: 200;
   nav {
     @include outer-container;
-    >h1 {
+    // >a {
+    //   color: $primary-lightest-color;
+    // }
+    >h1  {
       @include span-columns(10);
       // @include shift(1);
       // text-align: center;
-      color: $primary-lightest-color;
-      font-family: $serif;
-      font-weight: 400;
-      // font-style: italic;
-      opacity: 1.0;
-      font-size: 1.8em;
-      >span {
-        color: $primary-accent-color;
+      >a {
+        color: $primary-lightest-color;
+        font-family: $serif;
+        font-weight: 400;
+        // font-style: italic;
+        opacity: 1.0;
+        font-size: 1.0em;
+        >span {
+          color: $primary-accent-color;
+          &:hover {
+          color: $primary-light-color;
+          }
+        }
+        &:hover {
+          color: $primary-accent-color;
+        }
       }
-    }  
+    } 
   }
-
 }
 ///////////////////////////////////////////////// HERO //////////////////////////////////////////////
 
@@ -65,7 +75,7 @@ header {
 .hero {
   $hero-color: white;
   $gradient-angle: 10deg;
-  $hero-image: '../images/hero_landfill_1280_crop.jpg';
+  $hero-image: '../images/hero_landfill_1280_crop_grey.jpg';
   @include background(url($hero-image), no-repeat scroll);
   background-repeat: no-repeat;
   background-position: top;
@@ -157,21 +167,22 @@ b{
 b.back{
   transform: translateZ(-100px) rotateY(180deg);
   // background: $primary-dark-color;
-  // background:url(../images/side2.png);
+  background:url(../images/front.png);
 }
 b.right{
   transform:rotateY(-270deg) translateX(100px);
   transform-origin: top right;
-  // background:url(../images/side4.png);
+  background:url(../images/right.png);
 }
 b.left{
   transform:rotateY(270deg) translateX(-100px);
   transform-origin: center left;
-  // background:url(../images/side3.png);
+  background:url(../images/left.png);
 }
 b.top{
   transform:rotateX(-90deg) translateY(-100px);
   transform-origin: top center;
+  background:url(../images/top.png);
 }
 b.bottom{
   transform:rotateX(90deg) translateY(100px);
@@ -179,7 +190,7 @@ b.bottom{
 }
 b.front{
   transform: translateZ(100px);
-  // background:url(../images/side1.png);
+  background:url(../images/back.png);
 }
 
 /* hover transformations */
@@ -325,14 +336,15 @@ b.front{
   fieldset, #theform {
     @include span-columns(6);
     @include shift(3);
+    margin-top: 60px;
     input {
       border-radius: 0;
-      background-color: $primary-light-color;
+      background-color: $primary-accent-color;
       font-family: $serif;
       font-weight: normal;
       box-shadow: none;
       border: none;
-      color: $primary-dark-color;
+      color: #fff;
       height: $base-line-height *2;
     }
     input.submit_button {
@@ -382,9 +394,11 @@ form label, form input {
       div { // DO NOT STYLE
         div { // DO NOT STYLE
           div { 
-            img {
-              max-width: none;
-            }
+            >div {}
+            >div {}            
+            >div {}
+            >div {}
+
             .gm-style-iw {
               #content {
                 width: 100%;
@@ -400,6 +414,13 @@ form label, form input {
                   }
                 } 
               }
+            }
+
+
+          }
+          div {
+            >img {
+              max-width: none;
             }
           }
         }
@@ -448,78 +469,69 @@ form label, form input {
 
 ///////////////////////////////////////////////// FOOTER //////////////////////////////////////////////
 
-.footer-2 {
-  $footer-background: desaturate(darken($base-accent-color, 20), 30);
-  $footer-color: white;
-  $footer-link-color: transparentize($footer-color, .6);
-  $footer-disclaimer-color: transparentize($footer-color, .6);
-  background: $primary-dark-color;
-  padding: $base-line-height;
+footer {
+  background-color: $primary-dark-color;
+  padding: 2em;
+  padding-bottom: 4em;
   width: 100%;
-  .footer-logo {
-    margin-right: 1em;
-    margin-bottom: 1em;
-    @include media($large-screen) {
-      float: left;
-      margin-bottom: 0;
-    }
+  >h6 {
+    font-family: $serif;
+    margin-left: 1em;
+    color: $primary-light-color;
+    text-transform: uppercase;
+    font-size: 1.0em;
   }
-  .footer-logo img {
-    height: 1.6em;
-  } 
   ul {
     margin-bottom: 1em;
     @include media($large-screen) {
       float: left;
       margin-left: 1em;
-      margin-bottom: 0;
+      margin-bottom: 0em;
     }
   }
   ul li {
     padding-right: 1em;
-    font-weight: 800;
+    font-size: 0.7em;
+    font-weight: 600;
+    text-transform: uppercase;
     @include media($large-screen) {
       display: inline;
       text-align: left;
     }
   }
   ul li a {
-    color: $footer-link-color;
+    color: $primary-accent-color;
     &:hover {
-      color: transparentize($footer-color, 0);
+      color: $primary-light-color;
     }
   }
-  .footer-secondary-links {
+
+  ul.footer-social {
+      margin-top: 1em;
+
     @include media($large-screen) {
       float: right;
+      margin-top: 0;
     }
+
     li {
-      font-size: .8em;
-      font-weight: 400;
+      float: left;
+      font-size: 1em;
+      padding-right: .7em;
+
+      &:last-child {
+        padding-right: 0;
+      }
     }
-    ul.footer-social {
-      margin-top: 1em;
-      @include media($large-screen) {
-        float: right;
-        margin-top: 0;
-      }
-      li {
-        float: left;
-        font-size: 1em;
-        padding-right: .7em;
-        &:last-child {
-          padding-right: 0;
-        }
-      }
-      img {
-        opacity: .7;
-        height: 1.6em;
-        padding: 1px;
-        &:hover {
-          opacity: 1;
-        }
+
+    img {
+      opacity: .5;
+      height: 2.0em;
+      padding: 1px;
+
+      &:hover {
+        opacity: 1;
       }
     }
   }
 }
-

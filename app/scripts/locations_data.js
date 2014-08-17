@@ -1,7 +1,8 @@
     
-var longjohns = '../images/longjohns_icon.png';
+var longjohns_sm = '../images/longjohns_sm.png';
 
-var shirt = '../images/lsshirt_icon.png';
+var shirt_sm = '../images/shirt_sm.png';
+
 
 var locations = [
     
@@ -10,7 +11,7 @@ var locations = [
         position: new google.maps.LatLng(29.865911,-95.566727),
         // map: map,
         title:"American Textile Recycling",
-        icon: longjohns,
+        icon: longjohns_sm,
         content: 
         '<div id="content">'+
             '<div id="siteNotice">'+
@@ -25,7 +26,7 @@ var locations = [
         position: new google.maps.LatLng(32.946979,-80.624673),
         // map: map,
         title:"Carolina Textile Recycling",
-        icon: shirt,
+        icon: shirt_sm,
         content: 
         '<div id="content">'+
             '<div id="siteNotice">'+
@@ -40,7 +41,7 @@ var locations = [
         position: new google.maps.LatLng(27.7692544,-82.6630569),
         // map: map,
         title:"Suncoast Textile Recycling",
-        icon: longjohns,
+        icon: longjohns_sm,
         content: 
         '<div id="content">'+
             '<div id="siteNotice">'+
@@ -55,7 +56,7 @@ var locations = [
         position: new google.maps.LatLng(38.6791963,-90.3947229),
         // map: map,
         title:"USAgain",
-        icon: shirt,
+        icon: shirt_sm,
         content: 
         '<div id="content">'+
             '<div id="siteNotice">'+
@@ -70,7 +71,7 @@ var locations = [
         position: new google.maps.LatLng(40.7914948,-73.1382576),
         // map: map,
         title:"Earthrite Textile Recycling",
-        icon: longjohns,
+        icon: longjohns_sm,
         content: 
         '<div id="content">'+
             '<div id="siteNotice">'+
@@ -85,7 +86,7 @@ var locations = [
         position: new google.maps.LatLng(42.19606,-71.75631),
         // map: map,
         title:"Millbury Textile Recycling",
-        icon: shirt,
+        icon: shirt_sm,
         content: 
         '<div id="content">'+
             '<div id="siteNotice">'+
@@ -100,7 +101,7 @@ var locations = [
         position: new google.maps.LatLng(44.050317,-91.6214551),
         // map: map,
         title:"Miller Waste Mills Inc",
-        icon: longjohns,
+        icon: longjohns_sm,
         content: 
         '<div id="content">'+
             '<div id="siteNotice">'+
@@ -115,7 +116,7 @@ var locations = [
         position: new google.maps.LatLng(47.8487843,-122.2389721),
         // map: map,
         title:"Retex",
-        icon: shirt,
+        icon: shirt_sm,
         content: 
         '<div id="content">'+
             '<div id="siteNotice">'+
@@ -130,7 +131,7 @@ var locations = [
         position: new google.maps.LatLng(37.7756117,-122.4179582),
         // map: map,
         title:"San Francisco D.O.E.",
-        icon: longjohns,
+        icon: longjohns_sm,
         content: 
         '<div id="content">'+
             '<div id="siteNotice">'+
@@ -145,7 +146,7 @@ var locations = [
         position: new google.maps.LatLng(32.552842,-117.052538),
         // map: map,
         title:"A & E Textile Recovery",
-        icon: shirt,
+        icon: shirt_sm,
         content: 
         '<div id="content">'+
             '<div id="siteNotice">'+

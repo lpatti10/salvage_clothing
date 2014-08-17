@@ -66,7 +66,7 @@ var RequestPageView = Backbone.View.extend({
    	if (arrayScan1 !== -1){
       return console.log('Matched to rec1!');
       // Doesn't work :(
-      // $('#map-canvas1').css({'visibility':'visible', 'height':'100%'});
+      $('#map-canvas1').css({'visibility':'visible', 'height':'100%'});
 
     };
  		console.log(arrayScan1);
@@ -74,6 +74,7 @@ var RequestPageView = Backbone.View.extend({
    	var arrayScan2 = _.indexOf(rec2_zips, twoDigits);
 	   	if (arrayScan2 !== -1){
 	      return console.log('Matched to rec2!');
+      $('#map-canvas1').css({'visibility':'visible', 'height':'100%'});
     };
  		console.log(arrayScan2);
 
