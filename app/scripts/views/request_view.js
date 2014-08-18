@@ -22,6 +22,10 @@ var RequestPageView = Backbone.View.extend({
     var confirm = new ConfirmPageView();
 		$(".zombieContainer").html(confirm.el);
 		$(".pageContainer").hide();
+    
+    // Get user first name
+    var userName = $('#first-name').val();
+    console.log(userName);
 
     // Get user zip
     var userZip = $('#zip').val();
@@ -65,64 +69,72 @@ var RequestPageView = Backbone.View.extend({
    	var arrayScan1 = _.indexOf(rec1_zips, twoDigits);
    	if (arrayScan1 !== -1){
       return console.log('Matched to rec1!');
-      // Doesn't work :(
-      $('#map-canvas1').css({'visibility':'visible', 'height':'100%'});
-
+      
     };
  		console.log(arrayScan1);
+
 
    	var arrayScan2 = _.indexOf(rec2_zips, twoDigits);
 	   	if (arrayScan2 !== -1){
 	      return console.log('Matched to rec2!');
-      $('#map-canvas1').css({'visibility':'visible', 'height':'100%'});
+
     };
  		console.log(arrayScan2);
+
 
  		var arrayScan3 = _.indexOf(rec3_zips, twoDigits);
    	if (arrayScan3 !== -1){
       return console.log('Matched to rec3!');
+
     };
  		console.log(arrayScan3);
 
    	var arrayScan4 = _.indexOf(rec4_zips, twoDigits);
    	if (arrayScan4 !== -1){
       return console.log('Matched to rec4!');
+
     };
  		console.log(arrayScan4);
 
  		var arrayScan5 = _.indexOf(rec5_zips, twoDigits);
    	if (arrayScan5 !== -1){
       return console.log('Matched to rec5!');
+
     };
  		console.log(arrayScan5);
 
    	var arrayScan6 = _.indexOf(rec6_zips, twoDigits);
    	if (arrayScan6 !== -1){
       return console.log('Matched to rec6!');
+
     };
  		console.log(arrayScan6);
 
  		var arrayScan7 = _.indexOf(rec7_zips, twoDigits);
    	if (arrayScan7 !== -1){
       return console.log('Matched to rec7!');
+
     };
  		console.log(arrayScan7);
 
    	var arrayScan8 = _.indexOf(rec8_zips, twoDigits);
    	if (arrayScan8 !== -1){
       return console.log('Matched to rec8!');
+
     };
  		console.log(arrayScan8);
 
  		var arrayScan9 = _.indexOf(rec9_zips, twoDigits);
    	if (arrayScan9 !== -1){
       return console.log('Matched to rec9!');
+
     };
  		console.log(arrayScan9);
 
    	var arrayScan10 = _.indexOf(rec10_zips, twoDigits);
    	if (arrayScan10 !== -1){
       return console.log('Matched to rec10!');
+
     };
  		console.log(arrayScan10);
 

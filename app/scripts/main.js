@@ -1,5 +1,8 @@
 //Declare global variable for user_loc_map as empty string, then update based on submission
 
+//Attempting form global variables
+var userName = $('#first-name').val();
+var userZip = $('#zip').val();
 
 // Instance of Home Page
 var home = new HomePageView();
@@ -79,7 +82,7 @@ var formPlugin = function() {
     // });
 
 // GOOGLE MAP  /////////////////////////////////////////////////////////////////////////////
-
+      
 // An object literal to hold a number of map properties.
 function initialize() {
     // Added below for styled map??????????????????
