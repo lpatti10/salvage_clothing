@@ -277,35 +277,19 @@ var HomePageView = Backbone.View.extend({
 
 	render: function() {
 
-		// $('#map-canvas1').css({'display':'none'});
-
-//Works but doesn't load fully on reset to 100%
-		// $('#map-canvas1').css({'height':'0px'});
-		// $('#map-canvas2').css({'height':'0px'});
-		// $('#map-canvas3').css({'height':'0px'});
-		// $('#map-canvas4').css({'height':'0px'});
-		// $('#map-canvas5').css({'height':'0px'});
-		// $('#map-canvas6').css({'height':'0px'});
-		// $('#map-canvas7').css({'height':'0px'});
-		// $('#map-canvas8').css({'height':'0px'});
-		// $('#map-canvas9').css({'height':'0px'});
-		// $('#map-canvas10').css({'height':'0px'});
+	$('#map-canvas1').css({'display':'none'});
+	$('#map-canvas2').css({'display':'none'});
+	$('#map-canvas3').css({'display':'none'});
+	$('#map-canvas4').css({'display':'none'});
+	$('#map-canvas5').css({'display':'none'});
+	$('#map-canvas6').css({'display':'none'});
+	$('#map-canvas7').css({'display':'none'});
+	$('#map-canvas8').css({'display':'none'});
+	$('#map-canvas9').css({'display':'none'});
+	$('#map-canvas10').css({'display':'none'});
 
 
-
-//Works but doesn't load fully on reset to 100%
-		$('#map-canvas1').css({'visibility':'hidden', 'height':'0px'});
-		$('#map-canvas2').css({'visibility':'hidden', 'height':'0px'});
-		$('#map-canvas3').css({'visibility':'hidden', 'height':'0px'});
-		$('#map-canvas4').css({'visibility':'hidden', 'height':'0px'});
-		$('#map-canvas5').css({'visibility':'hidden', 'height':'0px'});
-		$('#map-canvas6').css({'visibility':'hidden', 'height':'0px'});
-		$('#map-canvas7').css({'visibility':'hidden', 'height':'0px'});
-		$('#map-canvas8').css({'visibility':'hidden', 'height':'0px'});
-		$('#map-canvas9').css({'visibility':'hidden', 'height':'0px'});
-		$('#map-canvas10').css({'visibility':'hidden', 'height':'0px'});
-
-		var template =  $('#home-template').html();
+	var template =  $('#home-template').html();
 		this.$el.html(template);
 	},
 
@@ -318,7 +302,6 @@ var HomePageView = Backbone.View.extend({
 	}
 	
 
-
 })
 
 
@@ -328,7 +311,7 @@ var RequestPageView = Backbone.View.extend({
 	className: 'pageInner',
 
 	events: {
-  	'submit #theform' : 'submitForm'
+  	'submit #theform' : 'submitForm',
 	},
 
 	initialize: function() {
@@ -336,6 +319,9 @@ var RequestPageView = Backbone.View.extend({
 	},
 
 	render: function() {
+    
+    var pos = $(window).scrollTop();
+
     $('#map-canvas').hide();
 		var template =  $('#request-template').html();
 		this.$el.html(template);
@@ -347,123 +333,25 @@ var RequestPageView = Backbone.View.extend({
     var confirm = new ConfirmPageView();
 		$(".zombieContainer").html(confirm.el);
 		$(".pageContainer").hide();
+    
+    // Get user first name
+    // var userName = $('#first-name').val();
+    // console.log(userName);
 
     // Get user zip
     var userZip = $('#zip').val();
-    console.log(userZip);
+    // console.log(userZip);
     // Grab first two digits of user zip
     var twoDigits = userZip.substring(0, 2);
-	  console.log(twoDigits);
-    
-
-
-
-    // Loop through array of zip categories and pair the entry with a rec center.
-    	// The indexOf() method returns the first index at which a given element can be found in the array, or -1 if it is not present.
-    
-    //Set up a loop:
-
-    // for(i = 1; i < 10)
-
-		// var arrayScan1 = rec1_zips.indexOf(twoDigits);
-		// var arrayScan2 = rec2_zips.indexOf(twoDigits);
-		// var arrayScan3 = rec3_zips.indexOf(twoDigits);
-		// var arrayScan4 = rec4_zips.indexOf(twoDigits);
-		// var arrayScan5 = rec5_zips.indexOf(twoDigits);
-		// var arrayScan6 = rec6_zips.indexOf(twoDigits);
-		// var arrayScan7 = rec7_zips.indexOf(twoDigits);
-		// var arrayScan8 = rec8_zips.indexOf(twoDigits);
-		// var arrayScan9 = rec9_zips.indexOf(twoDigits);
-		// var arrayScan10 = rec10_zips.indexOf(twoDigits);
-
-  //   console.log(arrayScan1);
-  //   console.log(arrayScan2);
-  //   console.log(arrayScan3);
-  //   console.log(arrayScan4);
-  //   console.log(arrayScan5);
-  //   console.log(arrayScan6);
-  //   console.log(arrayScan7);
-  //   console.log(arrayScan8);
-  //   console.log(arrayScan9);
-  //   console.log(arrayScan10);
-
-   	var arrayScan1 = _.indexOf(rec1_zips, twoDigits);
-   	if (arrayScan1 !== -1){
-      return console.log('Matched to rec1!');
-      // Doesn't work :(
-      $('#map-canvas1').css({'visibility':'visible', 'height':'100%'});
-
-    };
- 		console.log(arrayScan1);
-
-   	var arrayScan2 = _.indexOf(rec2_zips, twoDigits);
-	   	if (arrayScan2 !== -1){
-	      return console.log('Matched to rec2!');
-      $('#map-canvas1').css({'visibility':'visible', 'height':'100%'});
-    };
- 		console.log(arrayScan2);
-
- 		var arrayScan3 = _.indexOf(rec3_zips, twoDigits);
-   	if (arrayScan3 !== -1){
-      return console.log('Matched to rec3!');
-    };
- 		console.log(arrayScan3);
-
-   	var arrayScan4 = _.indexOf(rec4_zips, twoDigits);
-   	if (arrayScan4 !== -1){
-      return console.log('Matched to rec4!');
-    };
- 		console.log(arrayScan4);
-
- 		var arrayScan5 = _.indexOf(rec5_zips, twoDigits);
-   	if (arrayScan5 !== -1){
-      return console.log('Matched to rec5!');
-    };
- 		console.log(arrayScan5);
-
-   	var arrayScan6 = _.indexOf(rec6_zips, twoDigits);
-   	if (arrayScan6 !== -1){
-      return console.log('Matched to rec6!');
-    };
- 		console.log(arrayScan6);
-
- 		var arrayScan7 = _.indexOf(rec7_zips, twoDigits);
-   	if (arrayScan7 !== -1){
-      return console.log('Matched to rec7!');
-    };
- 		console.log(arrayScan7);
-
-   	var arrayScan8 = _.indexOf(rec8_zips, twoDigits);
-   	if (arrayScan8 !== -1){
-      return console.log('Matched to rec8!');
-    };
- 		console.log(arrayScan8);
-
- 		var arrayScan9 = _.indexOf(rec9_zips, twoDigits);
-   	if (arrayScan9 !== -1){
-      return console.log('Matched to rec9!');
-    };
- 		console.log(arrayScan9);
-
-   	var arrayScan10 = _.indexOf(rec10_zips, twoDigits);
-   	if (arrayScan10 !== -1){
-      return console.log('Matched to rec10!');
-    };
- 		console.log(arrayScan10);
-
-// DID NOT WORK
- 		// var arrayScan = function() {
- 		// 	_.indexOf(rec1_zips, twoDigits);
- 		// 	_.indexOf(rec2_zips, twoDigits);
- 		// 	_.indexOf(rec3_zips, twoDigits);
- 		// };
- 		// console.log(arrayScan);
-
-		// while (arrayScan != -1) {
-
-    // };
-
+	  // console.log(twoDigits)
   }
+
+  // scrollTop: function (event) {
+  //   $('.sticky').ScrollTo({
+  //     duration: 2000,
+  //     durationMode: 'all'
+  //   });
+  // }
 })
 var ConfirmPageView = Backbone.View.extend({
 	
@@ -479,50 +367,143 @@ var ConfirmPageView = Backbone.View.extend({
 	},
 
 	render: function() {
-		// this.render('initialize()', 2000);
-		// onLoad="setTimeout('initialize()', 2000);"
 
-			// var template = Handlebars.compile($('#confirm-template').html());
-			// this.$el.html(rendered);
-			// $('#map-canvas1').css({'height':'100%'});
+ 		// var pos = $(window).scrollTop();
 
-			// function displayMap() {
-   //        document.getElementById('map_canvas1').style.display="block";
-   //        initialize();
-   //    }
+    var userName = $('#first-name').val();
+    console.log(userName);
+    // Get user zip
+    var userZip = $('#zip').val();
+    console.log(userZip);
+    // Grab first two digits of user zip
+    var twoDigits = userZip.substring(0, 2);
+	  console.log(twoDigits);
 
-		// $('#map-canvas1').css({'display':'block'});
+	  var arrayScan1 = _.indexOf(rec1_zips, twoDigits);
+	   	if (arrayScan1 !== -1){
+	      console.log('Matched to rec1!');
+	      document.getElementById('map-canvas1').style.display="block";
+		  	initialize();
+    };
+ 		console.log(arrayScan1);
+
+	 	var arrayScan2 = _.indexOf(rec2_zips, twoDigits);
+	   	if (arrayScan2 !== -1){
+	      console.log('Matched to rec2!');
+	      document.getElementById('map-canvas2').style.display="block";
+		  	initialize();
+    };
+ 		console.log(arrayScan2);
+
+	 	var arrayScan3 = _.indexOf(rec3_zips, twoDigits);
+	   	if (arrayScan3 !== -1){
+	      console.log('Matched to rec3!');
+	      document.getElementById('map-canvas3').style.display="block";
+		  	initialize();
+    };
+ 		console.log(arrayScan3);
+
+ 		 var arrayScan4 = _.indexOf(rec4_zips, twoDigits);
+	   	if (arrayScan4 !== -1){
+	      console.log('Matched to rec4!');
+	      document.getElementById('map-canvas4').style.display="block";
+		  	initialize();
+    };
+ 		console.log(arrayScan4);
+
+ 		var arrayScan5 = _.indexOf(rec5_zips, twoDigits);
+	   	if (arrayScan5 !== -1){
+	      console.log('Matched to rec5!');
+	      document.getElementById('map-canvas5').style.display="block";
+		  	initialize();
+    };
+ 		console.log(arrayScan5);
+
+ 		var arrayScan6 = _.indexOf(rec6_zips, twoDigits);
+	   	if (arrayScan6 !== -1){
+	      console.log('Matched to rec6!');
+	      document.getElementById('map-canvas6').style.display="block";
+		  	initialize();
+    };
+ 		console.log(arrayScan6);
+
+ 		var arrayScan7 = _.indexOf(rec7_zips, twoDigits);
+	   	if (arrayScan7 !== -1){
+	      console.log('Matched to rec7!');
+	      document.getElementById('map-canvas7').style.display="block";
+		  	initialize();
+    };
+ 		console.log(arrayScan7);
+
+ 		var arrayScan8 = _.indexOf(rec8_zips, twoDigits);
+	   	if (arrayScan8 !== -1){
+	      console.log('Matched to rec8!');
+	      document.getElementById('map-canvas8').style.display="block";
+		  	initialize();
+    };
+ 		console.log(arrayScan8);
+
+ 		var arrayScan9 = _.indexOf(rec9_zips, twoDigits);
+	   	if (arrayScan9 !== -1){
+	      console.log('Matched to rec9!');
+	      document.getElementById('map-canvas9').style.display="block";
+		  	initialize();
+    };
+ 		console.log(arrayScan9);
+
+ 		var arrayScan10 = _.indexOf(rec10_zips, twoDigits);
+	   	if (arrayScan10 !== -1){
+	      console.log('Matched to rec10!');
+	      document.getElementById('map-canvas10').style.display="block";
+		  	initialize();
+    };
+ 		console.log(arrayScan10);
+
+	 	// document.getElementById('map-canvas1').style.display="block";
+	  // initialize();
+
+	 	// document.getElementById('map-canvas2').style.display="block";
+	  // initialize();
+
+	  // document.getElementById('map-canvas3').style.display="block";
+	  // initialize();
+
+	 	// document.getElementById('map-canvas4').style.display="block";
+	  // initialize();
+
+	 	// document.getElementById('map-canvas5').style.display="block";
+	  // initialize();
+
+	  // document.getElementById('map-canvas6').style.display="block";
+	  // initialize();
+
+	  // document.getElementById('map-canvas7').style.display="block";
+	  // initialize();
+
+	 	// document.getElementById('map-canvas8').style.display="block";
+	  // initialize();
+
+	 	// document.getElementById('map-canvas9').style.display="block";
+	  // initialize();
+
+	  // document.getElementById('map-canvas10').style.display="block";
+	  // initialize();
+
+// WORKS WITHOUT NAME PERSONALIZATION
+		// var template =  $('#confirm-template').html();
+		// this.$el.html(template);
+
+	var template = Handlebars.compile($('#confirm-template').html());
+			var rendered = template({firstName:userName});
+			this.$el.html(rendered);
 		
-			// $('#map-canvas').hide();  	var arrayScan1 = _.indexOf(rec1_zips, twoDigits);
-   
-
-    $('#map-canvas1').css({'visibility':'visible', 'height':'100%'});
-
-
-			
-
-
-			// need an "if" (this) then "show" (this map) statement 
-			//to match result map 1-10 to array match!!!!!!!!!!!!!!!!!!!!
-
-			// $('#map-canvas1').css({'visibility':'visible'});
-			// $('#map-canvas2').css({'visibility':'visible'});
-			// $('#map-canvas3').css({'visibility':'visible'});
-			// $('#map-canvas4').css({'visibility':'visible'});
-			// $('#map-canvas5').css({'visibility':'visible'});
-			// $('#map-canvas6').css({'visibility':'visible'});
-			// $('#map-canvas7').css({'visibility':'visible'});
-			// $('#map-canvas8').css({'visibility':'visible'});
-			// $('#map-canvas9').css({'visibility':'visible'});
-			// $('#map-canvas10').css({'visibility':'visible'});
-
-			var template =  $('#confirm-template').html();
-			this.$el.html(template);
-			
 	},
 })
 //Declare global variable for user_loc_map as empty string, then update based on submission
 
+//Attempting form global variables
+var userName = $('#first-name').val();
+var userZip = $('#zip').val();
 
 // Instance of Home Page
 var home = new HomePageView();
@@ -602,7 +583,7 @@ var formPlugin = function() {
     // });
 
 // GOOGLE MAP  /////////////////////////////////////////////////////////////////////////////
-
+      
 // An object literal to hold a number of map properties.
 function initialize() {
     // Added below for styled map??????????????????

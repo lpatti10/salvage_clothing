@@ -332,11 +332,16 @@ b.front{
 
 ///////////////////////////////////////////////// FORM //////////////////////////////////////////////
 #request-form {
+  padding-top: 100px;
   @include outer-container;
   fieldset, #theform {
     @include span-columns(6);
     @include shift(3);
-    margin-top: 60px;
+  
+    ::-webkit-input-placeholder { 
+      color: $primary-dark-color;
+    }
+
     input {
       border-radius: 0;
       background-color: $primary-accent-color;
@@ -347,6 +352,7 @@ b.front{
       color: #fff;
       height: $base-line-height *2;
     }
+  
     input.submit_button {
       font-size: 1.5em;
       font-family: $sans-serif-body;

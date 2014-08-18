@@ -117,7 +117,7 @@
        </div>
 </script>
 <!--REQUEST PAGE...............................................................................-->
-<script type="text/template" id="request-template">        
+<script type="text/x-handlebars-template" id="request-template">        
             <div id="request-form" method=" " action="/ " enctype="multipart/form-data" novalidate="">
 
                 <fieldset>
@@ -131,7 +131,7 @@
                     
             <form id="theform">
                 <label for="first-name">
-                    <input type="text" id="first-name" name="first_name" placeholder="First Name" data-required="true" />
+                    <input type="text" value="{{ firstName }}" id="first-name" name="first_name" placeholder="First Name" data-required="true" />
                 </label>
 
                 <label for="last-name">
@@ -175,13 +175,13 @@
     </div>
 </script>
 <!--CONFIRM PAGE..............................................................................--> 
-<script type="text/template" id="confirm-template">       
+<script type="text/x-handlebars-template" id="confirm-template">       
 
 
     <div id="confirm" >
         <section class="thankyou">
             <section>
-                <h1>Thank you, Laura.</h1>
+                <h1>Thank you, {{ firstName }}.</h1>
                 <h6>YOUR PRE-PAID BOX SHOULD ARRIVE IN 3–5 DAYS!</h6>
                 <ul class="share">
                     <li><a href="javascript:void(0)">
