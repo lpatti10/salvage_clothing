@@ -11,12 +11,14 @@ var RequestPageView = Backbone.View.extend({
 	},
 
 	render: function() {
-    
-    var pos = $(window).scrollTop();
+   
+    // var pos = $(window).scrollTop();
 
     $('#map-canvas').hide();
 		var template =  $('#request-template').html();
 		this.$el.html(template);
+
+    $('body').animatescroll(); 
 	},
 
 	submitForm: function (event) {
