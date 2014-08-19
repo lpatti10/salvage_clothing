@@ -1,3 +1,509 @@
+    
+var longjohns_sm = '../images/longjohns_sm.png';
+
+var shirt_sm = '../images/shirt_sm.png';
+
+
+var locations = [
+    
+    {
+        name: 'rec1', 
+        position: new google.maps.LatLng(29.865911,-95.566727),
+        // map: map,
+        title:"American Textile Recycling",
+        icon: longjohns_sm,
+        content: 
+        '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading"><a href="http://atrscorp.com" target="_blank">American Textile Recycling</a></h1>'+
+            '<div id="bodyContent">'+
+                '<p>10739 W Little York Rd #100, Houston, TX <br> (713) 856-6170</p>'+
+            '</div>'+
+        '</div>'
+    }, {
+        name: 'rec2', 
+        position: new google.maps.LatLng(32.946979,-80.624673),
+        // map: map,
+        title:"Carolina Textile Recycling",
+        icon: shirt_sm,
+        content: 
+        '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading"><a href="https://plus.google.com/105428587463519345659/about?gl=us&hl=en" target="_blank">Carolina Textile Recycling</a></h1>'+
+            '<div id="bodyContent">'+
+                '<p>68 Anderson Rd, Walterboro, SC <br> (843) 538-8644</p>'+
+            '</div>'+
+        '</div>'
+    },  {
+        name: 'rec3', 
+        position: new google.maps.LatLng(27.7692544,-82.6630569),
+        // map: map,
+        title:"Suncoast Textile Recycling",
+        icon: longjohns_sm,
+        content: 
+        '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading"><a href="https://plus.google.com/102660832478251858597/about?hl=en" target="_blank">Suncoast Textile Recycling</a></h1>'+
+            '<div id="bodyContent">'+
+                '<p>201 22nd St S, St Petersburg, FL <br> (727) 729-2862</p>'+
+            '</div>'+
+        '</div>'
+    },  {
+        name: 'rec4', 
+        position: new google.maps.LatLng(38.6791963,-90.3947229),
+        // map: map,
+        title:"USAgain",
+        icon: shirt_sm,
+        content: 
+        '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading"><a href="http://www.usagain.com" target="_blank">USAgain</a></h1>'+
+            '<div id="bodyContent">'+
+                '<p>1113 N Warson Rd, St Louis, MO <br> (314) 291-0046</p>'+
+            '</div>'+
+        '</div>'
+    },  {
+        name: 'rec5', 
+        position: new google.maps.LatLng(40.7914948,-73.1382576),
+        // map: map,
+        title:"Earthrite Textile Recycling",
+        icon: longjohns_sm,
+        content: 
+        '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading"><a href="https://plus.google.com/113257260254977162301/about?hl=en" target="_blank">Earthrite Textile Recycling</a></h1>'+
+            '<div id="bodyContent">'+
+                '<p>2073 5th Ave, Ronkonkoma, NY</p>'+
+            '</div>'+
+        '</div>'
+    },  {
+        name: 'rec6', 
+        position: new google.maps.LatLng(42.19606,-71.75631),
+        // map: map,
+        title:"Millbury Textile Recycling",
+        icon: shirt_sm,
+        content: 
+        '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading"><a href="http://www.millburyrecycling.com/" target="_blank">Millbury Textile Recycling</a></h1>'+
+            '<div id="bodyContent">'+
+                '<p>4 Lincoln Ave, Millbury, MA <br> (508) 865-1717</p>'+
+            '</div>'+
+        '</div>'
+    }, {
+        name: 'rec7', 
+        position: new google.maps.LatLng(44.050317,-91.6214551),
+        // map: map,
+        title:"Miller Waste Mills Inc",
+        icon: longjohns_sm,
+        content: 
+        '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading"><a href="http://www.millerwastemills.com/" target="_blank">Miller Waste Mills Inc</a></h1>'+
+            '<div id="bodyContent">'+
+                '<p>580 E Front St, Winona, MN <br> (507) 454-6906</p>'+
+            '</div>'+
+        '</div>'
+    }, {
+        name: 'rec8', 
+        position: new google.maps.LatLng(47.8487843,-122.2389721),
+        // map: map,
+        title:"Retex",
+        icon: shirt_sm,
+        content: 
+        '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading"><a href="http://www.retexnorthwest.com/" target="_blank">Retex</a></h1>'+
+            '<div id="bodyContent">'+
+                '<p>412 164th St SW, Lynnwood, WA 98087</p>'+
+            '</div>'+
+        '</div>'
+    }, {
+        name: 'rec9', 
+        position: new google.maps.LatLng(37.7756117,-122.4179582),
+        // map: map,
+        title:"San Francisco D.O.E.",
+        icon: longjohns_sm,
+        content: 
+        '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading"><a href="http://www.sfenvironment.org/" target="_blank">San Francisco D.O.E.</a></h1>'+
+            '<div id="bodyContent">'+
+                '<p>1455 E Market St #1200, San Francisco, CA 94103</p>'+
+            '</div>'+
+        '</div>'    
+    }, {
+        name: 'rec10', 
+        position: new google.maps.LatLng(32.552842,-117.052538),
+        // map: map,
+        title:"A & E Textile Recovery",
+        icon: shirt_sm,
+        content: 
+        '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading"><a href="http://aetextilerecovery.com/" target="_blank">A & E Textile Recovery</a></h1>'+
+            '<div id="bodyContent">'+
+                '<p>2365 Via Segundo, San Diego, CA 92173</p>'+
+            '</div>'+
+        '</div>'    
+    } 
+]
+
+
+
+
+//make array of 10 objects to 
+var rec1_zips = ['39', '70', '71', '72', '73', '74', '75', '76', '77', '78', '79']
+
+var rec2_zips = ['27', '28', '29', '30', '31', '35', '36', '37', '38']
+
+var rec3_zips = ['32', '33', '34']
+
+var rec4_zips = ['40', '41', '42', '43', '44', '45', '46', '47', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69']
+
+var rec5_zips = ['07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26']
+
+var rec6_zips = ['00', '01', '02', '03', '04', '05', '06']
+
+var rec7_zips = ['48', '49', '50', '51', '52', '53', '54', '55', '56', '57', '58', '59']
+
+var rec8_zips = ['82', '83', '97', '98', '99']
+
+var rec9_zips = ['84', '89', '93', '94', '95', '96']
+
+var rec10_zips = ['80', '81', '85', '86', '87', '88', '90', '91', '92']
+
+//underscore 'indexof' tells you where in array the match is found
+
+//Tim's method
+// var zips = [
+// 	{rec1_zips: [39, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79]},
+// 	{rec2_zips: [27, 28, 29, 30, 31, 35, 36, 37, 38]},
+// 	{rec3_zips: [32, 33, 34]},
+// 	{rec4_zips: [40, 41, 42, 43, 44, 45, 46, 47, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69]},
+// 	{rec5_zips: [07, 08, 09, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26]},
+// 	{rec6_zips: [00, 01, 02, 03, 04, 05, 06]},
+// 	{rec7_zips: [48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59]},
+// 	{rec8_zips: [82, 83, 97, 98, 99]},
+// 	{rec9_zips: [84, 89, 93, 94, 95, 96]},
+// 	{rec10_zips: [80, 81, 85, 86, 87, 88, 90, 91, 92]}
+// ];
+
+
+// _.each(zips, function (z) {
+//   _.each(z, function (a) {
+//     if (a.indexOf(45) !== -1){
+//       return console.log(z);
+//     }
+//   });
+// });
+
+(function( $ ) {
+	var requests = {};
+	var zipValid = {
+		us: /[0-9]{5}(-[0-9]{4})?/
+	};
+
+	$.ziptastic = function(country, zip, callback){
+		// If only zip and callback are given default to US
+		if (arguments.length == 2 && typeof arguments[1] == 'function') {
+			callback = arguments[1];
+			zip = arguments[0];
+			country = 'US';
+		}
+
+		country = country.toUpperCase();
+		// Only make unique requests
+		if(!requests[country]) {
+			requests[country] = {};
+		}
+		if(!requests[country][zip]) {
+			requests[country][zip] = $.getJSON('http://zip.getziptastic.com/v2/' + country + '/' + zip);
+		}
+
+		// Bind to the finished request
+		requests[country][zip].done(function(data) {
+			if (typeof callback == 'function') {
+				callback(data.country, data.state_short, data.city, zip);
+			}
+		});
+
+		// Allow for binding to the deferred object
+		return requests[country][zip];
+	};
+
+	$.fn.ziptastic = function( options ) {
+		return this.each(function() {
+			var ele = $(this);
+
+			ele.on('keyup', function() {
+				var zip = ele.val();
+
+				// TODO Non-US zip codes?
+				if(zipValid.us.test(zip)) {
+					// Deleted state param below?? -LP//////////////////////////////////////////////
+					$.ziptastic(zip, function(country, state_short, city) {
+						// Trigger the updated information
+						// Deleted state param below?? -LP//////////////////////////////////////////////
+						ele.trigger('zipChange', [country, state_short, city, zip]);
+					});
+				}
+			});
+		});
+	};
+})( jQuery );
+
+var HomePageView = Backbone.View.extend({
+	
+	className: 'pageInner',
+
+	events: {
+  	'click #request_btn' : 'requestBox'
+	},
+
+	initialize: function() {
+		this.render();
+	},
+
+	render: function() {
+
+	$('#map-canvas1').css({'display':'none'});
+	$('#map-canvas2').css({'display':'none'});
+	$('#map-canvas3').css({'display':'none'});
+	$('#map-canvas4').css({'display':'none'});
+	$('#map-canvas5').css({'display':'none'});
+	$('#map-canvas6').css({'display':'none'});
+	$('#map-canvas7').css({'display':'none'});
+	$('#map-canvas8').css({'display':'none'});
+	$('#map-canvas9').css({'display':'none'});
+	$('#map-canvas10').css({'display':'none'});
+
+
+	var template =  $('#home-template').html();
+		this.$el.html(template);
+	},
+
+	requestBox: function (event) {
+	 	// alert("Send me a box");
+	 	event.preventDefault();
+	 	var request = new RequestPageView();
+		$(".pageContainer").html(request.el);
+		formPlugin();
+	}
+	
+
+})
+
+
+
+var RequestPageView = Backbone.View.extend({
+	
+	className: 'pageInner',
+
+	events: {
+  	'submit #theform' : 'submitForm',
+	},
+
+	initialize: function() {
+		this.render();
+	},
+
+	render: function() {
+   
+    // var pos = $(window).scrollTop();
+
+    $('#map-canvas').hide();
+		var template =  $('#request-template').html();
+		this.$el.html(template);
+
+    $('body').animatescroll(); 
+    // $('body').animatescroll(); 
+	},
+
+	submitForm: function (event) {
+		event.preventDefault();
+    // alert("All done. Where's my box?");
+    var confirm = new ConfirmPageView();
+		$(".zombieContainer").html(confirm.el);
+		$(".pageContainer").hide();
+    
+    // Get user first name
+    // var userName = $('#first-name').val();
+    // console.log(userName);
+
+    // Get user zip
+    var userZip = $('#zip').val();
+    // console.log(userZip);
+    // Grab first two digits of user zip
+    var twoDigits = userZip.substring(0, 2);
+	  // console.log(twoDigits)
+  }
+
+  // scrollTop: function (event) {
+  //   $('.sticky').ScrollTo({
+  //     duration: 2000,
+  //     durationMode: 'all'
+  //   });
+  // }
+})
+var ConfirmPageView = Backbone.View.extend({
+	
+	className: 'pageInner',
+
+	events: {
+  	//none?
+	},
+
+	initialize: function() {
+		this.render();
+
+	},
+
+	render: function() {
+ 	
+ 		// var pos = $(window).scrollTop();
+
+    var userName = $('#first-name').val();
+    console.log(userName);
+    // Get user zip
+    var userZip = $('#zip').val();
+    console.log(userZip);
+    // Grab first two digits of user zip
+    var twoDigits = userZip.substring(0, 2);
+	  console.log(twoDigits);
+
+	  var arrayScan1 = _.indexOf(rec1_zips, twoDigits);
+	   	if (arrayScan1 !== -1){
+	      console.log('Matched to rec1!');
+	      document.getElementById('map-canvas1').style.display="block";
+		  	initialize();
+    };
+ 		console.log(arrayScan1);
+
+	 	var arrayScan2 = _.indexOf(rec2_zips, twoDigits);
+	   	if (arrayScan2 !== -1){
+	      console.log('Matched to rec2!');
+	      document.getElementById('map-canvas2').style.display="block";
+		  	initialize();
+    };
+ 		console.log(arrayScan2);
+
+	 	var arrayScan3 = _.indexOf(rec3_zips, twoDigits);
+	   	if (arrayScan3 !== -1){
+	      console.log('Matched to rec3!');
+	      document.getElementById('map-canvas3').style.display="block";
+		  	initialize();
+    };
+ 		console.log(arrayScan3);
+
+ 		 var arrayScan4 = _.indexOf(rec4_zips, twoDigits);
+	   	if (arrayScan4 !== -1){
+	      console.log('Matched to rec4!');
+	      document.getElementById('map-canvas4').style.display="block";
+		  	initialize();
+    };
+ 		console.log(arrayScan4);
+
+ 		var arrayScan5 = _.indexOf(rec5_zips, twoDigits);
+	   	if (arrayScan5 !== -1){
+	      console.log('Matched to rec5!');
+	      document.getElementById('map-canvas5').style.display="block";
+		  	initialize();
+    };
+ 		console.log(arrayScan5);
+
+ 		var arrayScan6 = _.indexOf(rec6_zips, twoDigits);
+	   	if (arrayScan6 !== -1){
+	      console.log('Matched to rec6!');
+	      document.getElementById('map-canvas6').style.display="block";
+		  	initialize();
+    };
+ 		console.log(arrayScan6);
+
+ 		var arrayScan7 = _.indexOf(rec7_zips, twoDigits);
+	   	if (arrayScan7 !== -1){
+	      console.log('Matched to rec7!');
+	      document.getElementById('map-canvas7').style.display="block";
+		  	initialize();
+    };
+ 		console.log(arrayScan7);
+
+ 		var arrayScan8 = _.indexOf(rec8_zips, twoDigits);
+	   	if (arrayScan8 !== -1){
+	      console.log('Matched to rec8!');
+	      document.getElementById('map-canvas8').style.display="block";
+		  	initialize();
+    };
+ 		console.log(arrayScan8);
+
+ 		var arrayScan9 = _.indexOf(rec9_zips, twoDigits);
+	   	if (arrayScan9 !== -1){
+	      console.log('Matched to rec9!');
+	      document.getElementById('map-canvas9').style.display="block";
+		  	initialize();
+    };
+ 		console.log(arrayScan9);
+
+ 		var arrayScan10 = _.indexOf(rec10_zips, twoDigits);
+	   	if (arrayScan10 !== -1){
+	      console.log('Matched to rec10!');
+	      document.getElementById('map-canvas10').style.display="block";
+		  	initialize();
+    };
+ 		console.log(arrayScan10);
+
+	 	// document.getElementById('map-canvas1').style.display="block";
+	  // initialize();
+
+	 	// document.getElementById('map-canvas2').style.display="block";
+	  // initialize();
+
+	  // document.getElementById('map-canvas3').style.display="block";
+	  // initialize();
+
+	 	// document.getElementById('map-canvas4').style.display="block";
+	  // initialize();
+
+	 	// document.getElementById('map-canvas5').style.display="block";
+	  // initialize();
+
+	  // document.getElementById('map-canvas6').style.display="block";
+	  // initialize();
+
+	  // document.getElementById('map-canvas7').style.display="block";
+	  // initialize();
+
+	 	// document.getElementById('map-canvas8').style.display="block";
+	  // initialize();
+
+	 	// document.getElementById('map-canvas9').style.display="block";
+	  // initialize();
+
+	  // document.getElementById('map-canvas10').style.display="block";
+	  // initialize();
+
+// WORKS WITHOUT NAME PERSONALIZATION
+		// var template =  $('#confirm-template').html();
+		// this.$el.html(template);
+
+	var template = Handlebars.compile($('#confirm-template').html());
+	var rendered = template({firstName:userName});
+	this.$el.html(rendered);
+
+	$('body').animatescroll(); 
+		
+	},
+})
 // T-shirt animation NOT WORKING!!!!!!!!!!!!!!!
 // var boxFill = function() {
 //     $( ".cube" ).hover(function() {

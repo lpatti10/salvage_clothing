@@ -12,7 +12,7 @@ var ConfirmPageView = Backbone.View.extend({
 	},
 
 	render: function() {
-
+ 	
  		// var pos = $(window).scrollTop();
 
     var userName = $('#first-name').val();
@@ -139,8 +139,10 @@ var ConfirmPageView = Backbone.View.extend({
 		// this.$el.html(template);
 
 	var template = Handlebars.compile($('#confirm-template').html());
-			var rendered = template({firstName:userName});
-			this.$el.html(rendered);
+	var rendered = template({firstName:userName});
+	this.$el.html(rendered);
+
+	$('body').animatescroll(); 
 		
 	},
 })

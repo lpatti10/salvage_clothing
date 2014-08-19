@@ -116,6 +116,17 @@ header {
 }
 
 ///////////////////////////////////////////////// CTA + ANIMA //////////////////////////////////////////////
+// i{
+//   position:absolute;
+//   top:50px;
+//   left:50px;
+//   width:100px;
+//   height:100px;
+//   display:block;
+//   background:url(http://i45.tinypic.com/muxvt1.png);
+//   transition: all 1s linear;
+// }
+
 
 
 
@@ -144,7 +155,25 @@ header {
   transform-style: preserve-3d;
   animation: spin 8s infinite linear;
   transition: all 1s linear;
+  z-index: 800;
 }
+
+img.textile {
+  position:absolute;
+  top:-700px;
+  left:0px;
+  height: 200px;
+  transition: all 1s linear;
+  // transition: top 0s -20px;
+}
+// a{
+//     color:blue;
+//     transition: color 0s;
+// }
+// a:hover{
+//     transition: color 1s;
+//     color: peachpuff;
+// }
 
 /* outer cube */
 b{
@@ -201,6 +230,15 @@ b.front{
   transform: translateZ(100px) rotateX(-210deg);
   transform-origin: top center;
 }
+.cube:hover img.textile {
+  top: -20px;
+  transition: top 2s;
+  // transition: height 2s;
+  // height: 50px;
+}
+
+//////////////////////////////////////// END ANIMATION ///////////////
+
 .cta {
   margin-top: -190px;
   height: auto;

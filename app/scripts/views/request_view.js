@@ -19,6 +19,7 @@ var RequestPageView = Backbone.View.extend({
 		this.$el.html(template);
 
     $('body').animatescroll(); 
+    // $('body').animatescroll(); 
 	},
 
 	submitForm: function (event) {
