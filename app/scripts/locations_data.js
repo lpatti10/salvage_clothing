@@ -1,6 +1,6 @@
     
-var longjohns_sm = '../images/longjohns_sm.png';
-
+// var longjohns_sm = '../images/longjohns_sm.png';
+var longjohns_sm = '../images/shirt_sm.png';
 var shirt_sm = '../images/shirt_sm.png';
 
 

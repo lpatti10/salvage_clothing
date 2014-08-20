@@ -40,95 +40,103 @@
 
         <header class="sticky">
             <nav>
-                <h1><a href="javascript:history.go(0)">
-<span>salvage</span>.clothing</a></h1>
+                <h1><a href="javascript:history.go(0)"><span>salvage</span>.clothing</a></h1>
+                <ul class="header-social">
+                      <li><a href="javascript:void(0)">
+                      <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/youtube-logo-circle.png" alt="">
+                    </a></li>
+                    <li><a href="javascript:void(0)">
+                      <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/twitter-logo-circle.png" alt="">
+                    </a></li>
+                    <li><a href="javascript:void(0)">
+                      <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/facebook-logo-circle.png" alt="">
+                    </a></li>
+                </ul>
             </nav>
         </header>
 
         <div class="pageContainer"></div>
         <div class="zombieContainer"></div>
 <!--HOME PAGE TEMPLATE...............................................................-->
-    <script type="text/template" id="home-template">
-  
-            <div class="hero">
-                <div class="hero-inner">
-                  
-                    <div class="hero-copy">
-                        <h2>3.8 BILLION POUNDS OF TEXTILE WASTE END UP IN LANDFILLS EACH YEAR</h2>
-                    </div>
-                </div>
+<script type="text/template" id="home-template">
+
+    <div class="hero">
+        <div class="hero-inner">
+          
+            <div class="hero-copy">
+                <h2>3.8 BILLION POUNDS OF TEXTILE WASTE END UP IN LANDFILLS EACH YEAR</h2>
             </div>
+        </div>
+    </div>
 
 
+    <div class="animation">
+      <div class="cube">
+        <b class="front"></b>
+        <b class="back"></b>
+        <b class="top"></b>
+        <b class="bottom"></b>
+        <b class="left"></b>
+        <b class="right"></b>
+        <img src="/images/whiteT.png" class="textile" />
+      </div>
+   </div>
 
-            <div class="animation">
-              <div class="cube">
-                <b class="front"></b>
-                <b class="back"></b>
-                <b class="top"></b>
-                <b class="bottom"></b>
-                <b class="left"></b>
-                <b class="right"></b>
-                <img src="/images/whiteT.png" class="textile" />
-              </div>
-             
-
-           </div>
-
-            <section class="cta">
-                <section class="ctaCopy">
-                    <button id="request_btn">REQUEST A BOX</button>
-                    <h1>Help by recycling your unwanted clothes.</h1>
-                    <article class="misconception">
-                        <h3>THE PROBLEM WITH DONATING</h3>
-                        <p>Many charity pick-up services and thrift stores are overwhelmed by the volume of donated clothing. Stained or damaged textiles can’t be resold and are typically disposed of. Synthetic fibers common today are problematic and hazardous to the decomposition process. We aim to take the unsellable clothes off the hands of these hard-working organizations.</p>
-                    </article>
-                </section>
-            </section>
+    <section class="cta">
+        <section class="ctaCopy">
+            <button id="request_btn">REQUEST A BOX</button>
+            <h1>Help by recycling your unwanted clothes.</h1>
+            <article class="misconception">
+                <h3>THE PROBLEM WITH DONATING</h3>
+                <p>Many charity pick-up services and thrift stores are overwhelmed by the volume of donated clothing. Stained or damaged textiles can’t be resold and are typically disposed of. Synthetic fibers common today are problematic and hazardous to the decomposition process. We aim to take the unsellable clothes off the hands of these hard-working organizations.</p>
+            </article>
+        </section>
+    </section>
             
 
-            <div class="bullets">
-                <div class="bullet three-col-bullet">
-                    <div class="bullet-icon bullet-icon-1">
-                    <span class="mega-octicon octicon-package"></span>
-                       
-                    </div>
-                    <div class="bullet-content">
-                        <h2>REQUEST PRE-PAID BOX</h2>
-                        <p>Based on your location, we’ll match you with the nearest participating facility. In 3-5 days, you’ll recieve an empty box with a pre-paid postage affixed.</p>
-                    </div>
-                </div>  
-                <div class="bullet three-col-bullet">
-                    <div class="bullet-icon bullet-icon-2">
-                    <span class="mega-octicon octicon-jersey"></span>
-                      
-                    </div>
-                    <div class="bullet-content">
-                        <h2>PACK USED TEXTILES</h2>
-                        <p>Start purging. We accept clothing and hosehold textiles in any condition. No cleaning, sorting or folding necessary! <a href="">What textiles can I recycle?</a></p>
-                    </div>
-                </div>
-                <div class="bullet three-col-bullet">
-                    <div class="bullet-icon bullet-icon-3">
-                    <span class="mega-octicon octicon-sync"></span>
-                       
-                    </div>
-                    <div class="bullet-content">
-                        <h2>DROP IT OFF!</h2>
-                        <p>Your sealed box is ready to go. Simply drop it off at any shipping merchant and all postage is paid. <a href="">Find a drop-off location.</a></p>
-                    </div>
-                </div> 
+    <div class="bullets">
+        <div class="bullet three-col-bullet">
+            <div class="bullet-icon bullet-icon-1">
+                <span class="mega-octicon octicon-package"></span>
             </div>
-       </div>
+            <div class="bullet-content">
+                <h2>REQUEST PRE-PAID BOX</h2>
+                <p>Based on your location, we’ll match you with the nearest participating facility. In 3-5 days, you’ll recieve an empty box with pre-paid postage affixed.</p>
+            </div>
+        </div>  
+        <div class="bullet three-col-bullet">
+            <div class="bullet-icon bullet-icon-2">
+                <span class="mega-octicon octicon-jersey"></span>
+            </div>
+            <div class="bullet-content">
+                <h2>PACK USED TEXTILES</h2>
+                <p>Start purging. We accept clothing and hosehold textiles in any condition. No cleaning, sorting or folding necessary! <a href="">What textiles can I recycle?</a></p>
+            </div>
+        </div>
+        <div class="bullet three-col-bullet">
+            <div class="bullet-icon bullet-icon-3">
+                <span class="mega-octicon octicon-sync"></span>
+            </div>
+            <div class="bullet-content">
+                <h2>DROP IT OFF!</h2>
+                <p>Your sealed box is ready to go. Simply drop it off at any shipping merchant and all postage is paid.<br> <a href="">Find a drop-off location.</a></p>
+            </div>
+        </div>   
+    </div>
+  
+   <section class="mapTitle">
+        <h2>Textile Recovery Facilities</h2>
+    </section>
 </script>
 <!--REQUEST PAGE...............................................................................-->
 <script type="text/x-handlebars-template" id="request-template">        
             <div id="request-form" method=" " action="/ " enctype="multipart/form-data" novalidate="">
 
                 <fieldset>
+
                     <h3>JUST ONE SIMPLE FORM.</h3>
                     <h6>NO ACCOUNT REQUIRED</h6>
-                    <p>Based on your location, we’ll match you with the nearest recycling facility. Your box will arrive in 3 to 5 days with a pre-paid shipping label included.</p>
+                    <p> <span class="octicon octicon-location"></span>&nbsp;Based on your location, we’ll match you with the nearest recycling facility.</p>
                     <small>All fields required.</small>
                   
                 </fieldset>

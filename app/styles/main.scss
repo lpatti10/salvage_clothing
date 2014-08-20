@@ -3,9 +3,9 @@
 @import '../../bower_components/bitters/app/assets/stylesheets/base';
 @import '../../bower_components/neat/app/assets/stylesheets/neat';
 
-// * {
-//   border: red 1px solid;
-// }
+$small-screen: em(320); //max-device-width;
+// $medium-screen: ;
+// $large-screen: ;
 
 $serif:'Droid Serif', serif;
 $sans-serif-body:'Open Sans', sans-serif;
@@ -32,21 +32,69 @@ body {
 }
 
 header {
+  @include media($medium-screen) {
+    padding-left: 2.7em;
+    padding-right: 2.0em;
+  }
   position: fixed;
   top: 0;
   height: 80px;
   width: 100%;
   background-color: $primary-dark-color;
   opacity: 0.95;
+  padding-left: 0em;
+  padding-right: 0em;
   padding-top: 1.4em;
   z-index: 200;
   nav {
     @include outer-container;
-    // >a {
-    //   color: $primary-lightest-color;
-    // }
+    ul.header-social {
+      @include media($small-screen) {
+        display: none;
+        // border: red solid 1px;
+      }
+      @include media($medium-screen) {
+        @include span-columns(4);
+        float: right;
+        margin-top: 8px;
+        // border: green solid 1px;
+      }
+      @include span-columns(2);
+      display: inline-block;
+      margin-top: 1em;
+      @include media($large-screen) {
+        float: right;
+        margin-top: 0;
+      }
+      li {
+        float: right;
+        font-size: 1em;
+        padding-right: .7em;
+        &:first-child {
+          padding-right: 0;
+        }
+      }
+      img {
+        opacity: .5;
+        height: 2.0em;
+        padding: 1px;
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
     >h1  {
+      @include media($small-screen) {
+        @include span-columns(12);
+        text-align: center;
+      }
+      @include media($medium-screen) {
+        @include span-columns(8);
+        text-align: left;
+        // border: blue solid 1px;
+      }
       @include span-columns(10);
+
       // @include shift(1);
       // text-align: center;
       >a {
@@ -84,6 +132,10 @@ header {
   .hero-inner {
     @include outer-container;
     @include clearfix;
+    @include media($small-screen) {
+      padding-left: 80px;
+      padding-right: 80px;
+    }
     padding: 10em;
     padding-top: 7em;
     margin: auto;
@@ -92,10 +144,16 @@ header {
     .hero-copy {
       text-align: center;
       h2 {
-        color: $primary-dark-color;
-        font-size: 2.0em;
-        margin-bottom: .5em;
-        font-family: $sans-serif-display;
+        @include media($small-screen) {
+          font-size: 1.75em;
+          color: $primary-dark-color;
+          margin-bottom: .5em;
+          font-family: $sans-serif-display;
+          text-shadow: 3px 1px 3px $primary-lightest-color; 
+        }
+        @include media($medium-screen) {
+          font-size: 2.5em;
+        }
         @include media($large-screen) {
           font-size: 3.0em;
         }
@@ -296,6 +354,19 @@ b.front{
 ///////////////////////////////////////////////// 3 COL //////////////////////////////////////////////
 
 .bullets {
+  @include media($small-screen) {
+    padding-right: 20px;
+    padding-left: 20px;
+    text-align: center;
+  }
+  @include media($medium-screen) {
+    padding-right: 100px;
+    padding-left: 100px;
+  }
+  @include media($medium-screen) {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
   @include outer-container;
   $icon-bullet-size: 3.5em;
   overflow: auto;
@@ -346,7 +417,7 @@ b.front{
   .bullet-content {
     // margin-left: $icon-bullet-size *1.4;
     margin: 0 auto;
-    margin-bottom: 2em;
+    margin-bottom: 0;
     padding: $icon-bullet-size /2; 
   }
   h2 {
@@ -368,6 +439,22 @@ b.front{
   }
 }
 
+.mapTitle {
+  // position: relative;
+  h2 {
+    background-color: $primary-accent-color ;
+    // position: absolute;
+    top: 10px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    text-align: center;
+    color:$primary-lightest-color;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    // padding-left: 4%;
+  }
+}
+
 ///////////////////////////////////////////////// FORM //////////////////////////////////////////////
 #request-form {
   padding-top: 100px;
@@ -375,11 +462,15 @@ b.front{
   fieldset, #theform {
     @include span-columns(6);
     @include shift(3);
-  
+    border: none;
+    border-top: 4px solid $primary-accent-color;
+    // background-color: $primary-light-color;
     ::-webkit-input-placeholder { 
       color: $primary-dark-color;
     }
-
+    p {
+      margin-top: 20px;
+    }
     input {
       border-radius: 0;
       background-color: $primary-accent-color;
@@ -389,6 +480,7 @@ b.front{
       border: none;
       color: #fff;
       height: $base-line-height *2;
+      // padding-left: 10px;
     }
   
     input.submit_button {
@@ -398,6 +490,7 @@ b.front{
       border: 5px $primary-dark-color solid;
       border-radius: 0;
       color: $primary-dark-color;
+      text-align: center;
       margin-top: 1em;
       margin-bottom: 1.5em; 
       background: none;
@@ -535,14 +628,24 @@ footer {
   padding-bottom: 4em;
   width: 100%;
   >h6 {
-    font-family: $serif;
-    margin-left: 1em;
-    color: $primary-light-color;
-    text-transform: uppercase;
-    font-size: 1.0em;
+    @include media($small-screen) {
+      font-size: 1.0em;
+      font-family: $serif;
+      margin-left: 0em;
+      text-transform: uppercase;
+      color: $primary-light-color;
+    }
+    // @include media($medium-screen) {
+    //   margin-left: 0em;
+    // }
+    @include media($large-screen) {
+      margin-left: 1em;
+      
+    }
   }
   ul {
     margin-bottom: 1em;
+    // @include media($medium-screen),
     @include media($large-screen) {
       float: left;
       margin-left: 1em;
@@ -554,7 +657,8 @@ footer {
     font-size: 0.7em;
     font-weight: 600;
     text-transform: uppercase;
-    @include media($large-screen) {
+    
+    @include media($medium-screen) {
       display: inline;
       text-align: left;
     }
@@ -568,12 +672,10 @@ footer {
 
   ul.footer-social {
       margin-top: 1em;
-
     @include media($large-screen) {
       float: right;
       margin-top: 0;
     }
-
     li {
       float: left;
       font-size: 1em;
@@ -583,7 +685,6 @@ footer {
         padding-right: 0;
       }
     }
-
     img {
       opacity: .5;
       height: 2.0em;
