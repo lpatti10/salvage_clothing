@@ -8,7 +8,7 @@ $small-screen: em(320); //max-device-width;
 // $large-screen: ;
 
 $serif:'Droid Serif', serif;
-$sans-serif-body:'Open Sans', sans-serif;
+$sans-serif-body:'Montserrat', sans-serif; //'Open Sans', sans-serif;
 $sans-serif-display: 'Oswald', sans-serif;
 
 $primary-dark-color: #3C474D; //brown #271D17
@@ -470,6 +470,7 @@ b.front{
 
 ///////////////////////////////////////////////// FORM //////////////////////////////////////////////
 #request-form {
+  font-family: $sans-serif-body;
   padding-top: 120px;
   @include outer-container;
   fieldset, #theform {
