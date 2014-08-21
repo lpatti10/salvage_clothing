@@ -48,6 +48,11 @@ header {
   z-index: 200;
   nav {
     @include outer-container;
+    .corner {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+    }
     ul.header-social {
       @include media($small-screen) {
         display: none;
@@ -91,10 +96,11 @@ header {
       @include media($medium-screen) {
         @include span-columns(8);
         text-align: left;
+        padding-left: 20px;
         // border: blue solid 1px;
       }
       @include span-columns(10);
-
+      padding-left: 0px;
       // @include shift(1);
       // text-align: center;
       >a {
@@ -133,14 +139,21 @@ header {
     @include outer-container;
     @include clearfix;
     @include media($small-screen) {
+      padding: 10em;
+      padding-top: 100px;
       padding-left: 80px;
       padding-right: 80px;
+      margin: auto;
+      text-align: center;
+      color: $hero-color;
+
     }
-    padding: 10em;
-    padding-top: 7em;
-    margin: auto;
-    text-align: center;
-    color: $hero-color;
+    @include media($medium-screen) {
+      padding: 10em;
+      padding-top: 100px;
+      padding-left: 150px;
+      padding-right: 150px;
+    }
     .hero-copy {
       text-align: center;
       h2 {
@@ -389,27 +402,27 @@ b.front{
   }
   .bullet-icon-1 {
     background: $primary-accent-color;
-      &:hover {
-        background: $primary-dark-color;
-      }
+      // &:hover {
+      //   background: $primary-dark-color;
+      // }
     .octicon-package {
       color: $primary-light-color;
     }
   }
   .bullet-icon-2 {
     background: $primary-accent-color;
-      &:hover {
-        background: $primary-dark-color;
-      }
+      // &:hover {
+      //   background: $primary-dark-color;
+      // }
     .octicon-jersey {
       color: $primary-light-color;
     }
   }
   .bullet-icon-3 {
     background: $primary-accent-color;
-      &:hover {
-        background: $primary-dark-color;
-      }
+      // &:hover {
+      //   background: $primary-dark-color;
+      // }
     .octicon-sync {
       color: $primary-light-color;
     }
@@ -457,7 +470,7 @@ b.front{
 
 ///////////////////////////////////////////////// FORM //////////////////////////////////////////////
 #request-form {
-  padding-top: 100px;
+  padding-top: 120px;
   @include outer-container;
   fieldset, #theform {
     @include span-columns(6);

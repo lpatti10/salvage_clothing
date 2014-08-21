@@ -602,7 +602,7 @@ var formPlugin = function() {
 function initialize() {
     // Added below for styled map??????????????????
     var shirt_lg = '../images/shirt_lg.png';
-    var longjohns_lg = '../images/longjohns_lg.png';
+    var longjohns_lg = '../images/shirt_sm.png';
 
     var styles = [
       {
