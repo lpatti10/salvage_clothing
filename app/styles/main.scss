@@ -22,7 +22,7 @@ html{
 
 body {
   background: #fafafa;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $sans-serif-body;
   color: #333;
   height: 100%;
 }
@@ -344,11 +344,13 @@ b.front{
       padding-bottom: 40px;
       h3 {
         color: $primary-light-color;
+        font-family: $sans-serif-body;
         margin-top: 1.5em; 
-        font-size: 1.0em;
+        font-size: 0.85em;
+        padding-top: 2px;
         width: 300px;
         margin: 0 auto;
-        margin-top: 20px;
+        margin-top: 30px;
         background-color: $primary-accent-color;
       }
       p {
@@ -371,6 +373,7 @@ b.front{
     padding-right: 20px;
     padding-left: 20px;
     text-align: center;
+
   }
   @include media($medium-screen) {
     padding-right: 100px;
@@ -434,6 +437,9 @@ b.front{
     padding: $icon-bullet-size /2; 
   }
   h2 {
+    font-family: $sans-serif-body;
+    letter-spacing: -0.0125em;
+    font-weight: normal;
     font-size: $icon-bullet-size /2.5;
     padding-top: $icon-bullet-size /7;
     margin-bottom: $icon-bullet-size /8;
@@ -443,8 +449,10 @@ b.front{
   p {
     color: $primary-dark-color;
     >a {
+      text-transform: uppercase;
       color: $primary-accent-color;
-      font-weight: 700;
+      // font-weight: 700;
+      font-size: $icon-bullet-size /4;
       &:hover {
         text-decoration: underline;
       }
@@ -613,7 +621,8 @@ form label, form input {
     >h6 {
       font-family: $sans-serif-body;
       margin-top: 10px;
-      font-size: 0.75em;
+      font-size: 0.8em;
+      font-weight: normal;
     }
     .share {
       @include span-columns(6);
