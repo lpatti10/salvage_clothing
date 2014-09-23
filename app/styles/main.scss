@@ -272,6 +272,7 @@ b.back{
 b.right{
   transform:rotateY(-270deg) translateX(100px);
   transform-origin: top right;
+  // transform-origin: center right; // testing repair
   background:url(../images/right.png);
 }
 b.left{
@@ -301,6 +302,12 @@ b.front{
   transform: translateZ(100px) rotateX(-210deg);
   transform-origin: top center;
 }
+//trial repair
+// .cube:hover b.right{
+//   transform: none;
+//   transform-origin: none;
+// }
+
 .cube:hover img.textile {
   top: -20px;
   transition: top 2s;
